@@ -166,6 +166,12 @@
     }
 }
 
+@media (max-width: 480px) {
+    .owl-nav {
+        display: none !important;
+    }
+}
+
 .header-carousel .owl-nav {
     position: absolute;
     top: 50%;
