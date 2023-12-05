@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>404 Page || Code Explorer</title>
+    <title>Help || Code Explorer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="error, 404, not found, page not found, Code Explorer">
-    <meta name="description" content="Oops! The page you are looking for could not be found on Code Explorer.">
+    <meta name="keywords" content="Code Explorer, help, support, assistance">
+    <meta name="description" content="Get assistance and support with Code Explorer. Explore our help section for answers to common questions and useful resources.">
 
     <!-- Favicon -->
     <link href="img/ce.png" rel="icon">
@@ -29,6 +29,35 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Your CSS Code Goes Here */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add any additional styling specific to the Help page */
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Customize the styling for headings, paragraphs, etc. */
+        h1,
+        h2 {
+            color: var(--primary);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Add more styling as needed */
+    </style>
 </head>
 
 <body>
@@ -59,10 +88,10 @@
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
             <a href="https://devlinecommunity.wixsite.com/dev-line-community" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -75,12 +104,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Not Found</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Help</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">404</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Help</li>
                         </ol>
                     </nav>
                 </div>
@@ -90,21 +119,29 @@
     <!-- Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.html">Go Back To Home</a>
-                </div>
-            </div>
-        </div>
+    <!-- Help Start -->
+    <div class="help-container">
+        <h1 class="fw-medium">Help Center</h1>
+        <p>Welcome you to the Help Center of Code Explorer!!!</p>
+        <h2 class="fw-medium">Frequently Asked Questions</h2>
+        <p>Check our <a href="faq.html">FAQ page</a> for answers to commonly asked questions about using our platform.</p>
+
+        <h2 class="fw-medium">Contact Support</h2>
+        <p>If you can't find the information you need in our FAQ, please feel free to contact our support team at pabitra.banerjee@codeexplorer.live.</p>
+
+        <h2 class="fw-medium">Video Tutorials</h2>
+        <p>Explore our collection of video tutorials that cover various topics and features. Visit our <a href="/tutorials">Tutorials page</a> to get started.</p>
+
+        <h2 class="fw-medium">User Guides</h2>
+        <p>For in-depth information on using specific features or tools, refer to our user guides. You can find them on the <a href="/guides">Guides page</a>.</p>
+
+        <h2 class="fw-medium">Feedback</h2>
+        <p>We value your feedback! If you have suggestions, encounter issues, or want to share your experience, please let us know. Visit our <a href="/feedback">Feedback page</a>.</p>
+
+        <h2 class="fw-medium">Community Forum</h2>
+        <p>Connect with other users, ask questions, and share your knowledge on our community forum. Join the discussions on our <a href="/forum">Forum page</a>.</p>
     </div>
-    <!-- 404 End -->
+    <!-- Help End -->
 
 
     <!-- Footer Start -->

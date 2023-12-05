@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>404 Page || Code Explorer</title>
+    <title>Frequently Asked Questions || Code Explorer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="error, 404, not found, page not found, Code Explorer">
-    <meta name="description" content="Oops! The page you are looking for could not be found on Code Explorer.">
+    <meta name="keywords" content="Code Explorer, FAQ, frequently asked questions, help">
+    <meta name="description" content="Find answers to common questions about Code Explorer. Explore our FAQ section for assistance and support.">
 
     <!-- Favicon -->
     <link href="img/ce.png" rel="icon">
@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,11 +31,58 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Your CSS Code Goes Here */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add any additional styling specific to the FAQ page */
+        .faq-page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Customize the styling for headings, paragraphs, etc. */
+        h2{
+            color: #000;
+        }
+        h1 {
+            color: var(--primary);
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            /* Add space between paragraphs for better readability */
+        }
+
+        /* Style for FAQ sections and items */
+        .faq-section {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        /* Add more styling as needed */
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -57,14 +106,16 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="team.html" class="dropdown-item active">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="https://devlinecommunity.wixsite.com/dev-line-community" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="https://devlinecommunity.wixsite.com/dev-line-community"
+                class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -75,12 +126,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Not Found</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Frequently Asked Questions</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">404</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">FQAs</li>
                         </ol>
                     </nav>
                 </div>
@@ -90,21 +141,84 @@
     <!-- Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.html">Go Back To Home</a>
-                </div>
-            </div>
+    <!-- FAQ Start -->
+<div class="faq-page-container">
+    <h1 class="fw-medium">Frequently Asked Questions</h1>
+    <p>Here are some of our frequently asked questions. If you are unable to find your solution here, please contact us directly.</p>
+
+    <div class="faq-section">
+        <h2 class="fw-medium">1. Account and Registration</h2>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How do I create an account?</h3>
+            <p>To create an account, click on the "Sign Up" button, fill in the required information, and follow the instructions sent to your email.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Can I change my account information?</h3>
+            <p>Yes, you can update your account details by logging in and navigating to the "Profile" section. Make the necessary changes and save.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Is my account information secure?</h3>
+            <p>We employ advanced security measures, including encryption and access controls, to protect your account information.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">What do I do if I forget my password?</h3>
+            <p>If you forget your password, click on the "Forgot Password" link on the login page. Follow the instructions to reset your password.</p>
         </div>
     </div>
-    <!-- 404 End -->
+
+    <div class="faq-section">
+        <h2 class="fw-medium">2. Courses and Learning</h2>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How do I enroll in a course?</h3>
+            <p>Visit the course page, click on the "Enroll" button, and follow the prompts to complete the enrollment process.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Can I access course materials offline?</h3>
+            <p>Course materials are accessible only online. However, some courses may offer downloadable resources for offline reference.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Are there any free courses available?</h3>
+            <p>Yes, we offer a selection of free courses. Explore them on the "Free Courses" page.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How long do I have access to a course after enrolling?</h3>
+            <p>After enrolling, you have lifetime access to the course materials, including any updates or additions.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="fw-medium">3. Privacy and Security</h2>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How is my personal information protected?</h3>
+            <p>We prioritize the security of your information, using encryption, access controls, and secure protocols. Refer to our <a href="/privacy-policy">Privacy Policy</a> for details.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Can I delete my account and data?</h3>
+            <p>Yes, you can request the deletion of your account and associated data. Contact our support team for assistance.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How can I report a security issue?</h3>
+            <p>If you discover a security issue or vulnerability, email our security team at security@codeexplorer.com. We appreciate your assistance.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Do you share my information with third parties?</h3>
+            <p>No, we do not share your personal information with third parties without your consent. Refer to our <a href="/privacy-policy">Privacy Policy</a> for detailed information on data sharing practices.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">How do I contact customer support?</h3>
+            <p>Contact our support team at support@codeexplorer.com for any assistance or inquiries. We are here to help!</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="fw-semi-bold">Are there student discounts available?</h3>
+            <p>Yes, we offer student discounts on selected courses. Verify your student status to avail of the discount during the enrollment process.</p>
+        </div>
+    </div>
+
+    <!-- Add more sections and questions based on your specific FAQ needs -->
+
+</div>
+
+    <!-- FAQ End -->
 
 
     <!-- Footer Start -->
@@ -201,7 +315,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
