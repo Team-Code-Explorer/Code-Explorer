@@ -9,3 +9,4 @@ We also provide various material and resources to support the student's learning
 Our goal is to provide a welcoming and inclusive learning environment where individuals can come to develop their programming skills and reach their full potential. We are confident that our instruction and resources will help you succeed, and we look forward to working with you.
 
 Join Code Explorer today and start exploring the world of code!
+Thank You!
