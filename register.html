@@ -113,7 +113,8 @@
                                     <div class="custom-checkbox custom-control">
                                         <input type="checkbox" name="agree" id="agree" class="custom-control-input"
                                             required="">
-                                        <label for="agree" class="custom-control-label">I agree to the <a href="terms">Terms
+                                        <label for="agree" class="custom-control-label">I agree to the <a
+                                                href="terms">Terms
                                                 and Conditions</a></label>
                                     </div>
                                 </div>
@@ -170,21 +171,39 @@
         let LnameInp = document.getElementById('lnameInp');
         let MainForm = document.getElementById('MainForm');
 
+        // Function to show a success message
+        function showSuccessMessage() {
+            alert("Registration completed successfully!");
+        }
+
+        // Function to redirect to the login page
+        function redirectToLoginPage() {
+            window.location.href = "login"; // Change "login" to the actual URL of your login page
+        }
+
+        // Function to handle successful registration
+        function handleRegistrationSuccess(credentials) {
+            set(ref(db, 'UsersAuthList/' + credentials.user.uid), {
+                firstName: FnameInp.value,
+                lastName: LnameInp.value
+            }).then(() => {
+                showSuccessMessage();
+                redirectToLoginPage();
+            });
+        }
+
         let RegisterUser = evt => {
             evt.preventDefault();
 
             createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
                 .then((credentials) => {
-                    set(ref(db, 'UsersAuthList/' + credentials.user.uid), {
-                        firstName: FnameInp.value,
-                        lastName: LnameInp.value
-                    })
+                    handleRegistrationSuccess(credentials);
                 })
                 .catch((error) => {
                     alert(error.message);
                     console.log(error.code);
                     console.log(error.message);
-                })
+                });
         }
 
         MainForm.addEventListener('submit', RegisterUser);
@@ -198,6 +217,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

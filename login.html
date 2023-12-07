@@ -111,7 +111,8 @@
                                 </div>
 
                                 <div class="form-group m-0" style="margin-top: 10px;">
-                                    <center> <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                                    <center> <button type="submit" class="btn btn-primary btn-block"
+                                            style="margin-top: 20px;">
                                             Login
                                         </button></center>
                                 </div>
@@ -126,6 +127,7 @@
         </div>
     </section>
     <!-- Login Form End -->
+
 
 
     <!-- Firebase Start -->
@@ -167,20 +169,29 @@
                 .then((credentials) => {
                     get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) => {
                         if (snapshot.exists) {
-                            localStorage.setItem('user-info', JSON.stringify({
-                                firstName: snapshot.val().firstName,
-                                lastName: snapshot.val().lastName
-                            }))
-                            localStorage.setItem('user-creds', JSON.stringify(credentials.user));
-                            window.location.href = 'index';
+                            const firstName = snapshot.val().firstName;
+                            const welcomeMessage = `Welcome ${firstName} to Code Explorer!`;
+
+                            // Display alert with user's first name
+                            alert(welcomeMessage);
+
+                            // Set timeout for redirection after 3 seconds
+                            setTimeout(() => {
+                                localStorage.setItem('user-info', JSON.stringify({
+                                    firstName: snapshot.val().firstName,
+                                    lastName: snapshot.val().lastName
+                                }));
+                                localStorage.setItem('user-creds', JSON.stringify(credentials.user));
+                                window.location.href = 'index';
+                            }, 3000);
                         }
-                    })
+                    });
                 })
                 .catch((error) => {
                     alert(error.message);
                     console.log(error.code);
                     console.log(error.message);
-                })
+                });
         }
 
         MainForm.addEventListener('submit', SignInUser);
@@ -309,6 +320,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
