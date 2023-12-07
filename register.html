@@ -7,15 +7,15 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Oops! The page you are looking for could not be found on Code Explorer.">
     <meta name="keywords"
-    content="Code Explorer, coding courses, programming, online learning, coding projects, Pabitra Banerjee">
-<meta name="author" content="Pabitra Banerjee">
-<meta name="robots" content="index, follow">
-<meta name="og:title" content="Code Explorer">
-<meta name="og:description"
-    content="Elevate your programming skills with Code Explorer. Online courses, expert instructors, and real projects.">
-<meta name="og:image" content="https://explorecode.live/img/code-xplore-logo.png">
-<meta name="og:url" content="https://explorecode.live">
-<meta name="og:site_name" content="Code Explorer">
+        content="Code Explorer, coding courses, programming, online learning, coding projects, Pabitra Banerjee">
+    <meta name="author" content="Pabitra Banerjee">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" content="Code Explorer">
+    <meta name="og:description"
+        content="Elevate your programming skills with Code Explorer. Online courses, expert instructors, and real projects.">
+    <meta name="og:image" content="https://explorecode.live/img/code-xplore-logo.png">
+    <meta name="og:url" content="https://explorecode.live">
+    <meta name="og:site_name" content="Code Explorer">
 
     <!-- Favicon -->
     <link href="img/ce.png" rel="icon">
@@ -151,7 +151,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        import { getDatabase, set, ref, push, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
@@ -173,6 +173,7 @@
         const analytics = getAnalytics(app);
         const db = getDatabase();
         const auth = getAuth(app);
+        const newsletterRef = ref(db, 'NewsLetter');
 
         let EmailInp = document.getElementById('emailInp');
         let PassInp = document.getElementById('passwordInp');
@@ -215,6 +216,50 @@
                 });
         }
 
+        async function handleSignUp() {
+            const newsLetterInput = document.getElementById('newsLetter');
+            const email = newsLetterInput.value;
+
+            if (isValidEmail(email)) {
+                // Check if the email already exists
+                const emailExists = await checkEmailExists(email);
+
+                if (!emailExists) {
+                    // Push the email to the NewsLetter node in the database
+                    push(newsletterRef, { email })
+                        .then(() => {
+                            alert("Successfully subscribed to the newsletter!");
+                            // Clear the input field after successful subscription
+                            newsLetterInput.value = '';
+                        })
+                        .catch((error) => {
+                            console.error("Error subscribing to the newsletter:", error);
+                            alert("An error occurred. Please try again later.");
+                        });
+                } else {
+                    alert("This email is already subscribed.");
+                }
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        }
+
+        async function checkEmailExists(email) {
+            const snapshot = await get(newsletterRef);
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                return Object.values(data).some(entry => entry.email === email);
+            }
+            return false;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Attach click event to the signup button
+        document.querySelector('#newsLetter + button').addEventListener('click', handleSignUp);
         MainForm.addEventListener('submit', RegisterUser);
     </script>
     <!-- Firebase End -->
@@ -292,7 +337,8 @@
                     <br />
                     <p>Our newsletter will help you to stay updated.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Email">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Email"
+                            id="newsLetter">
                         <button type="button"
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
