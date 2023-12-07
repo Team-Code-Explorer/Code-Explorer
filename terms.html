@@ -93,12 +93,72 @@
                         <a href="404" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <span id="userName" class="dropdown-item" style="display: none;"></span>
+                        <a href="login" id="loginLink" class="dropdown-item">Login</a>
+                        <a href="register" id="registerLink" class="dropdown-item">Register</a>
+                        <button id="logoutBtn" style="display: none;" class="dropdown-item">Logout</button>
+                    </div>
+                </div>
             </div>
-            <a href="https://devlinecommunity.wixsite.com/dev-line-community" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="https://devlinecommunity.wixsite.com/dev-line-community"
+                class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- Script to dynamically update the navbar based on user authentication -->
+    <script type="module">
+        // Function to check if the user is logged in
+        function isUserLoggedIn() {
+            // Implement your logic to check if the user is logged in
+            // For example, check if the user is stored in localStorage
+            return localStorage.getItem('user-info') !== null;
+        }
+
+        // Function to update the navbar based on user authentication
+        function updateNavbar() {
+            const userName = document.getElementById('userName');
+            const loginLink = document.getElementById('loginLink');
+            const registerLink = document.getElementById('registerLink');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (isUserLoggedIn()) {
+                const userInfo = JSON.parse(localStorage.getItem('user-info'));
+                userName.textContent = `Welcome, ${userInfo.firstName}!`;
+                userName.style.display = 'inline-block';
+                loginLink.style.display = 'none';
+                registerLink.style.display = 'none';
+                logoutBtn.style.display = 'inline-block';
+            } else {
+                userName.style.display = 'none';
+                loginLink.style.display = 'inline-block';
+                registerLink.style.display = 'inline-block';
+                logoutBtn.style.display = 'none';
+            }
+        }
+
+        // Function to handle logout
+        function handleLogout() {
+            // Implement logout logic
+            // For example, remove user data from localStorage
+            localStorage.removeItem('user-info');
+            localStorage.removeItem('user-creds');
+            // Redirect to the register page
+            window.location.href = 'register';
+        }
+
+        // Call this function when the page loads to initialize the navbar
+        updateNavbar();
+
+        // Add click event listener for the logout button
+        document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+    </script>
 
 
     <!-- Header Start -->
