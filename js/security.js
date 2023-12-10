@@ -21,16 +21,16 @@ document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
 
-// Custom message when trying to select content
-document.addEventListener('keydown', function (event) {
-    if (event.ctrlKey || event.metaKey) {
-        // Ctrl key (Windows) or Command key (Mac) + C
-        if (event.keyCode === 67) {
-            event.preventDefault();
-            displayCopyMessage();
-        }
-    }
-});
+// // Custom message when trying to select content
+// document.addEventListener('keydown', function (event) {
+//     if (event.ctrlKey || event.metaKey) {
+//         // Ctrl key (Windows) or Command key (Mac) + C
+//         if (event.keyCode === 67) {
+//             event.preventDefault();
+//             displayCopyMessage();
+//         }
+//     }
+// });
 
 // Preventing keyboard shortcuts
 document.addEventListener('keydown', function (event) {
@@ -79,18 +79,18 @@ document.addEventListener('keydown', function (event) {
     // Reload
     if ((event.ctrlKey || event.metaKey) && event.keyCode === 82) {
         event.preventDefault();
-        displayPreventCopyMessage('Page Reload Disabled', 'Reloaded by mistake?');
+        displayPreventCopyMessage('Reloaded by mistake?');
         speakText('If you wish to reload, please use the reload icon.');
       }
 
 });
 
-// Disable text selection
-document.addEventListener('selectstart', function (event) {
-    event.preventDefault();
-    displayPreventCopyMessage('Selecting Text Is Not Allowed.');
-    speakText('Selecting Text Is Not Allowed.');
-});
+// // Disable text selection
+// document.addEventListener('selectstart', function (event) {
+//     event.preventDefault();
+//     displayPreventCopyMessage('Selecting Text Is Not Allowed.');
+//     speakText('Selecting Text Is Not Allowed.');
+// });
 
 // Disable image drag-and-drop
 document.addEventListener('dragstart', function (event) {

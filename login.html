@@ -186,7 +186,8 @@
                             const welcomeMessage = `Welcome ${firstName} to Code Explorer!`;
 
                             // Display alert with user's first name
-                            alert(welcomeMessage);
+                            displaySuccess(welcomeMessage);
+                            textRead(welcomeMessage);
 
                             // Set timeout for redirection after 3 seconds
                             setTimeout(() => {
@@ -196,12 +197,13 @@
                                 }));
                                 localStorage.setItem('user-creds', JSON.stringify(credentials.user));
                                 window.location.href = 'index';
-                            }, 300);
+                            }, 2000);
                         }
                     });
                 })
                 .catch((error) => {
-                    alert(error.message);
+                    displaySuccess(error.message);
+                    textRead(error.message);
                     console.log(error.code);
                     console.log(error.message);
                 });
@@ -210,13 +212,54 @@
         let SendPasswordReset = () => {
             sendPasswordResetEmail(auth, EmailInp.value)
                 .then(() => {
-                    alert("Password Reset Mail Sent To Your Email Address !!!");
+                    displaySuccess("Password Reset Mail Sent To Your Email Address !!!");
+                    textRead("Password Reset Mail Sent To Your Email Address !!!");
                 })
                 .catch((error) => {
                     console.log("Failed to send password reset email !!!");
+                    displaySuccess("Failed to send password reset email !!!");
+                    textRead("Failed to send password reset email !!!");
                     console.log(error.code);
                     console.log(error.message);
                 })
+        }
+
+        // Display custom message
+        function displaySuccess(message) {
+            let preventCopyContainer = document.createElement('div');
+            preventCopyContainer.classList.add('prevent-copy-container');
+
+            let preventCopyContent = document.createElement('div');
+            preventCopyContent.classList.add('prevent-copy-content');
+
+            let messageElement = document.createElement('p');
+            messageElement.textContent = message;
+
+            preventCopyContent.appendChild(messageElement);
+            preventCopyContainer.appendChild(preventCopyContent);
+            document.body.appendChild(preventCopyContainer);
+
+            // Remove the message after a certain time (e.g., 3 seconds)
+            setTimeout(function () {
+                document.body.removeChild(preventCopyContainer);
+            }, 3000);
+        }
+
+        function textRead(text) {
+            if ('speechSynthesis' in window) {
+                let speech = new SpeechSynthesisUtterance();
+                speech.text = text;
+                speech.lang = 'en-US';
+
+                let voices = speechSynthesis.getVoices();
+                let femaleVoice = voices.find(function (voice) {
+                    return voice.name === 'Google UK English Female';
+                });
+
+                speech.voice = femaleVoice;
+
+                speechSynthesis.speak(speech);
+            }
         }
 
         async function handleSignUp() {
@@ -231,19 +274,23 @@
                     // Push the email to the NewsLetter node in the database
                     push(newsletterRef, { email })
                         .then(() => {
-                            alert("Successfully subscribed to the newsletter!");
+                            displaySuccess("Successfully subscribed to the newsletter!");
+                            textRead("Successfully subscribed to the newsletter!");
                             // Clear the input field after successful subscription
                             newsLetterInput.value = '';
                         })
                         .catch((error) => {
                             console.error("Error subscribing to the newsletter:", error);
-                            alert("An error occurred. Please try again later.");
+                            displaySuccess("An error occurred. Please try again later.");
+                            textRead("An error occurred. Please try again later.");
                         });
                 } else {
-                    alert("This email is already subscribed.");
+                    displaySuccess("This email is already subscribed.");
+                    textRead("This email is already subscribed.");
                 }
             } else {
-                alert("Please enter a valid email address.");
+                displaySuccess("Please enter a valid email address.");
+                textRead("Please enter a valid email address.");
             }
         }
 
@@ -279,7 +326,7 @@
         crossorigin="anonymous"></script>
 
 
-        <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -444,19 +491,19 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/security.js"></script>
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-            (function () {
-                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-                s1.async = true;
-                s1.src = 'https://embed.tawk.to/6575f59b07843602b80046d0/1hhaceqq1';
-                s1.charset = 'UTF-8';
-                s1.setAttribute('crossorigin', '*');
-                s0.parentNode.insertBefore(s1, s0);
-            })();
-        </script>
-        <!--End of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6575f59b07843602b80046d0/1hhaceqq1';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 </body>
 

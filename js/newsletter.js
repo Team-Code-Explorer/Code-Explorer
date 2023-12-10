@@ -20,6 +20,44 @@ const db = getDatabase();
 const auth = getAuth(app);
 const newsletterRef = ref(db, 'NewsLetter');
 
+// Display custom message
+function displaySuccess(message) {
+    let preventCopyContainer = document.createElement('div');
+    preventCopyContainer.classList.add('prevent-copy-container');
+
+    let preventCopyContent = document.createElement('div');
+    preventCopyContent.classList.add('prevent-copy-content');
+
+    let messageElement = document.createElement('p');
+    messageElement.textContent = message;
+
+    preventCopyContent.appendChild(messageElement);
+    preventCopyContainer.appendChild(preventCopyContent);
+    document.body.appendChild(preventCopyContainer);
+
+    // Remove the message after a certain time (e.g., 3 seconds)
+    setTimeout(function () {
+        document.body.removeChild(preventCopyContainer);
+    }, 3000);
+}
+
+function textRead(text) {
+    if ('speechSynthesis' in window) {
+        let speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+        speech.lang = 'en-US';
+
+        let voices = speechSynthesis.getVoices();
+        let femaleVoice = voices.find(function (voice) {
+            return voice.name === 'Google UK English Female';
+        });
+
+        speech.voice = femaleVoice;
+
+        speechSynthesis.speak(speech);
+    }
+}
+
 async function handleSignUp() {
     const newsLetterInput = document.getElementById('newsLetter');
     const email = newsLetterInput.value;
@@ -32,19 +70,23 @@ async function handleSignUp() {
             // Push the email to the NewsLetter node in the database
             push(newsletterRef, { email })
                 .then(() => {
-                    alert("Successfully subscribed to the newsletter!");
+                    displaySuccess("Successfully subscribed to the newsletter!");
+                    textRead("Successfully subscribed to the newsletter!");
                     // Clear the input field after successful subscription
                     newsLetterInput.value = '';
                 })
                 .catch((error) => {
                     console.error("Error subscribing to the newsletter:", error);
-                    alert("An error occurred. Please try again later.");
+                    displaySuccess("An error occurred. Please try again later.");
+                    textRead("An error occurred. Please try again later.");
                 });
         } else {
-            alert("This email is already subscribed.");
+            displaySuccess("This email is already subscribed.");
+            textRead("This email is already subscribed.");
         }
     } else {
-        alert("Please enter a valid email address.");
+        displaySuccess("Please enter a valid email address.");
+        textRead("Please enter a valid email address.");
     }
 }
 
