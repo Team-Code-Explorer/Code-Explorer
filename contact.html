@@ -447,7 +447,6 @@
                     subject: subject,
                     message: message
                 }).then(() => {
-                    alert("Message sent successfully!");
                     displaySuccess("Message sent successfully!");
                     textRead("Message sent successfully!");
                     // Clear form fields after successful submission
@@ -457,12 +456,10 @@
                     messageInput.value = '';
                 }).catch((error) => {
                     console.error("Error submitting the form:", error);
-                    alert("An error occurred. Please try again later.");
                     displaySuccess("An error occurred. Please try again later.");
                     textRead("An error occurred. Please try again later.");
                 });
             } else {
-                alert("Please fill in all the fields.");
                 displaySuccess("Please fill in all the fields.");
                 textRead("Please fill in all the fields.");
             }
