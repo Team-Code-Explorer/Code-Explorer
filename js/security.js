@@ -76,124 +76,133 @@ document.addEventListener('keydown', function (event) {
     //     speakText('Closing The Tab Is Not Allowed.');
     // }
 
-    // Reload
-    if ((event.ctrlKey || event.metaKey) && event.keyCode === 82) {
+    // Custom message when trying to select content
+        if (event.ctrlKey || event.metaKey) {
+            // Ctrl key (Windows) or Command key (Mac) + C
+            if (event.keyCode === 67) {
+                event.preventDefault();
+                displayCopyMessage();
+            }
+        }
+
+        // Reload
+        if ((event.ctrlKey || event.metaKey) && event.keyCode === 82) {
+            event.preventDefault();
+            displayPreventCopyMessage('Reloaded by mistake?');
+            speakText('If you wish to reload, please use the reload icon.');
+        }
+
+    });
+
+    // Disable text selection
+    // document.addEventListener('selectstart', function (event) {
+    //     event.preventDefault();
+    //     displayPreventCopyMessage('Selecting Text Is Not Allowed.');
+    //     speakText('Selecting Text Is Not Allowed.');
+    // });
+
+    // Disable image drag-and-drop
+    document.addEventListener('dragstart', function (event) {
         event.preventDefault();
-        displayPreventCopyMessage('Reloaded by mistake?');
-        speakText('If you wish to reload, please use the reload icon.');
-      }
+        displayPreventCopyMessage('Dragging Is Not Allowed.');
+        speakText('Dragging Is Not Allowed.');
+    });
 
-});
-
-// // Disable text selection
-// document.addEventListener('selectstart', function (event) {
-//     event.preventDefault();
-//     displayPreventCopyMessage('Selecting Text Is Not Allowed.');
-//     speakText('Selecting Text Is Not Allowed.');
-// });
-
-// Disable image drag-and-drop
-document.addEventListener('dragstart', function (event) {
-    event.preventDefault();
-    displayPreventCopyMessage('Dragging Image Is Not Allowed.');
-    speakText('Dragging Image Is Not Allowed.');
-});
-
-// // Prevent page reload
-// window.addEventListener('beforeunload', function (event) {
-//     // Display a confirmation message (optional)
-//     event.returnValue = 'Are you sure you want to leave?';
-//     // Alternatively, you can use the following line without a confirmation message:
-//     // event.preventDefault();
-// });
+    // Prevent page reload
+    window.addEventListener('beforeunload', function (event) {
+        // Display a confirmation message (optional)
+        event.returnValue = 'Are you sure you want to leave?';
+        // Alternatively, you can use the following line without a confirmation message:
+        // event.preventDefault();
+    });
 
 
-// Display custom message
-function displayCopyMessage() {
-    let copyMessage = document.createElement('div');
-    copyMessage.classList.add('copy-message');
+    // Display custom message
+    function displayCopyMessage() {
+        let copyMessage = document.createElement('div');
+        copyMessage.classList.add('copy-message');
 
-    let copyMessageContent = document.createElement('div');
-    copyMessageContent.classList.add('copy-message-content');
+        let copyMessageContent = document.createElement('div');
+        copyMessageContent.classList.add('copy-message-content');
 
-    let icon = document.createElement('i');
-    icon.classList.add('fas', 'fa-exclamation-circle');
+        let icon = document.createElement('i');
+        icon.classList.add('fas', 'fa-exclamation-circle');
 
-    let message = document.createElement('p');
-    message.textContent = 'You Cannot Copy Anything From Here.';
+        let message = document.createElement('p');
+        message.textContent = 'You Cannot Copy Anything From Here.';
 
-    copyMessageContent.appendChild(icon);
-    copyMessageContent.appendChild(message);
-    copyMessage.appendChild(copyMessageContent);
-    document.body.appendChild(copyMessage);
+        copyMessageContent.appendChild(icon);
+        copyMessageContent.appendChild(message);
+        copyMessage.appendChild(copyMessageContent);
+        document.body.appendChild(copyMessage);
 
-    // Remove the message after a certain time (e.g., 3 seconds)
-    setTimeout(function () {
-        document.body.removeChild(copyMessage);
-    }, 3000);
+        // Remove the message after a certain time (e.g., 3 seconds)
+        setTimeout(function () {
+            document.body.removeChild(copyMessage);
+        }, 3000);
 
-    // Speak the message aloud
-    speakText('You Cannot Copy Anything From Here.');
-}
-
-// Speak text using the Web Speech API
-function speakText(text) {
-    if ('speechSynthesis' in window) {
-        let speech = new SpeechSynthesisUtterance();
-        speech.text = text;
-        speech.lang = 'en-US';
-
-        let voices = speechSynthesis.getVoices();
-        let femaleVoice = voices.find(function (voice) {
-            return voice.name === 'Google UK English Female';
-        });
-
-        speech.voice = femaleVoice;
-
-        speechSynthesis.speak(speech);
+        // Speak the message aloud
+        speakText('You Cannot Copy Anything From Here.');
     }
-}
 
-// Display custom message
-function displayPreventCopyMessage(message) {
-    let preventCopyContainer = document.createElement('div');
-    preventCopyContainer.classList.add('prevent-copy-container');
+    // Speak text using the Web Speech API
+    function speakText(text) {
+        if ('speechSynthesis' in window) {
+            let speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speech.lang = 'en-US';
 
-    let preventCopyContent = document.createElement('div');
-    preventCopyContent.classList.add('prevent-copy-content');
+            let voices = speechSynthesis.getVoices();
+            let femaleVoice = voices.find(function (voice) {
+                return voice.name === 'Google UK English Female';
+            });
 
-    let messageElement = document.createElement('p');
-    messageElement.textContent = message;
+            speech.voice = femaleVoice;
 
-    preventCopyContent.appendChild(messageElement);
-    preventCopyContainer.appendChild(preventCopyContent);
-    document.body.appendChild(preventCopyContainer);
-
-    // Remove the message after a certain time (e.g., 3 seconds)
-    setTimeout(function () {
-        document.body.removeChild(preventCopyContainer);
-    }, 3000);
-}
-
-// // Alert message on Enter key press
-// document.addEventListener('keypress', function (event) {
-//     // Enter key - Prevent default behavior and display the alert message
-//     if (event.keyCode === 13) {
-//         event.preventDefault();
-//         displayPreventCopyMessage("You Can't Hit The Enter Button.");
-//         speakText("You Can't Hit The Enter Button.");
-//     }
-// });
-
-// Prevent "view-source" URL from opening on form submission
-document.addEventListener('submit', function (event) {
-    let formElement = event.target;
-    let targetUrl = formElement.getAttribute('action') || formElement.action;
-    let viewSourceUrlPattern = /view-source:/i;
-
-    if (viewSourceUrlPattern.test(targetUrl)) {
-        event.preventDefault();
-        displayPreventCopyMessage('Viewing Source Code Is Not Allowed.');
-        speakText('Viewing Source Code Is Not Allowed.');
+            speechSynthesis.speak(speech);
+        }
     }
-});
+
+    // Display custom message
+    function displayPreventCopyMessage(message) {
+        let preventCopyContainer = document.createElement('div');
+        preventCopyContainer.classList.add('prevent-copy-container');
+
+        let preventCopyContent = document.createElement('div');
+        preventCopyContent.classList.add('prevent-copy-content');
+
+        let messageElement = document.createElement('p');
+        messageElement.textContent = message;
+
+        preventCopyContent.appendChild(messageElement);
+        preventCopyContainer.appendChild(preventCopyContent);
+        document.body.appendChild(preventCopyContainer);
+
+        // Remove the message after a certain time (e.g., 3 seconds)
+        setTimeout(function () {
+            document.body.removeChild(preventCopyContainer);
+        }, 3000);
+    }
+
+    // Alert message on Enter key press
+    document.addEventListener('keypress', function (event) {
+        // Enter key - Prevent default behavior and display the alert message
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            displayPreventCopyMessage("You Can't Hit The Enter Button.");
+            speakText("You Can't Hit The Enter Button.");
+        }
+    });
+
+    // Prevent "view-source" URL from opening on form submission
+    document.addEventListener('submit', function (event) {
+        let formElement = event.target;
+        let targetUrl = formElement.getAttribute('action') || formElement.action;
+        let viewSourceUrlPattern = /view-source:/i;
+
+        if (viewSourceUrlPattern.test(targetUrl)) {
+            event.preventDefault();
+            displayPreventCopyMessage('Viewing Source Code Is Not Allowed.');
+            speakText('Viewing Source Code Is Not Allowed.');
+        }
+    });
