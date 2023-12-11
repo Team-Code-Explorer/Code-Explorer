@@ -108,13 +108,13 @@ document.addEventListener('keydown', function (event) {
         speakText('Dragging Is Not Allowed.');
     });
 
-    // Prevent page reload
-    window.addEventListener('beforeunload', function (event) {
-        // Display a confirmation message (optional)
-        event.returnValue = 'Are you sure you want to leave?';
-        // Alternatively, you can use the following line without a confirmation message:
-        // event.preventDefault();
-    });
+    // // Prevent page reload
+    // window.addEventListener('beforeunload', function (event) {
+    //     // Display a confirmation message (optional)
+    //     event.returnValue = 'Are you sure you want to leave?';
+    //     // Alternatively, you can use the following line without a confirmation message:
+    //     // event.preventDefault();
+    // });
 
 
     // Display custom message
