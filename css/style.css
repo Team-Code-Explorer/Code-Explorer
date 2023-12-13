@@ -452,3 +452,16 @@
     padding-right: 0;
     border-right: none;
 }
+
+/*** C-Programming ***/
+/*** Introduction ***/
+
+.padding {
+    padding-left: 70px !important;
+}
+
+@media (max-width: 767px) {
+    .padding {
+        padding-left: 12px !important;
+    }
+}
