@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>C-Programming Introduction || Code Explorer</title>
+    <title>C-Programming Enrollment Form || Code Explorer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- SEO -->
@@ -45,6 +45,7 @@
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/security.css">
+    <link rel="stylesheet" href="../css/enrollment.css">
 </head>
 
 <body>
@@ -147,75 +148,155 @@
         document.getElementById('logoutBtn').addEventListener('click', handleLogout);
     </script>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary back mb-5 page-header img-fluid">
-        <div class="container back">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">C Programming</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="https://explorecode.live">Home</a>
-                            </li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"><a class="text-white" href="../c-programming">C Programming</a></li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+    <div class="wrapper">
+        <div class="title">Student Registration Form
         </div>
-    </div>
-    <!-- Header End -->
+        <form id="cEnrollment">
+            <div class="form">
 
-    <!-- Content Start -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center mb-5 mt-3">
-                <h1 class="fw-bold">C-Programming Introduction</h1>
-                <p class="text-muted">Unlock the power of programming with Code Explorer's comprehensive C-Programming
-                    course.</p>
-            </div>
-            <div class="text-justify">
-                <p>Welcome to the world of C-Programming, a fundamental language that forms the backbone of computer
-                    programming. Whether you're a beginner or looking to enhance your skills, our course is designed to
-                    provide a solid foundation in C-Programming.</p>
-            </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="../img/C-Programming.png" alt="C-Programming" class="img-fluid rounded">
+                <div class="inputfield">
+                    <label>First Name</label>
+                    <input type="text" class="input" id="fname" name="fname" placeholder="Enter first name"
+                        maxlength="30" title="Enter only alphabets" required>
                 </div>
-                <div class="col-lg-6 padding">
-                    <div class="text-justify">
-                        <p style="font-size: 30px; font-weight: 700; color: blue;">Why C-Programming?</p>
-                        <ul class="list-unstyled padding">
-                            <li><i class="bi bi-check-circle text-primary"></i> Widely used in system development</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Efficient and powerful language</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Fundamental for learning other languages
-                            </li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Excellent for algorithm implementation
-                            </li>
-                        </ul>
 
-                        <p style="font-size: 30px; font-weight: 700; color: blue;">What you'll learn:</p>
-                        <ul class="list-unstyled padding">
-                            <li><i class="bi bi-check-circle text-primary"></i> Basic syntax and structure of C</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Control flow and decision-making</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Functions and modular programming</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Memory management and pointers</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> File handling in C</li>
-                        </ul>
+                <div class="inputfield">
+                    <label>Last Name</label>
+                    <input type="text" class="input" id="lname" name="lname" placeholder="Enter last name"
+                        maxlength="30" title="Enter only alphabets" required>
+                </div>
+
+                <div class="inputfield" id="gender">
+                    <label for="">Gender</label>
+                    <input type="radio" name="gender" id="radio" value="Male">Male
+                    <input type="radio" name="gender" id="radio" value="Female">Female
+                </div>
+
+                <div class="inputfield">
+                    <label for="">Age</label>
+                    <input type="text" class="input" name="age" id="age" placeholder="Enter your age" maxlength="2" required>
+                </div>
+
+
+                <div class="inputfield">
+                    <label for="">Date of Birth</label>
+                    <input type="date" class="input" id="dob" name="dob" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="email" class="input" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+
+
+                <div class="inputfield">
+                    <label for="">Phone Number</label>
+                    <div class="custom-select" id="phone-codes">
+                        <select id="phone-code">
+                            <option value="+91">+91</option>
+                        </select>
+                    </div>
+                    <input type="tel" class="input" name="phone-number" maxlength="10" id="phone-number"
+                        placeholder="Enter your phone number" title="Please enter valid phone number" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>Address</label>
+                    <textarea class="textarea" name="address" id="address" cols="30" rows="5" placeholder="Enter your address"
+                        maxlength="100" required></textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>State</label>
+                    <div class="custom_select">
+                        <select id="state" name="state" required>
+                            <option value="">--Select your state--</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
                     </div>
                 </div>
+
+                <div class="inputfield">
+                    <label>Pin Code</label>
+                    <input type="text" class="input" id="pincode" name="pincode" placeholder="Enter your pin code" maxlength="6"
+                        required>
+                </div>
+
+                <div class="inputfield" id="hobbies">
+                    <label for="">Hobbies</label>
+                    <div class="hobbies">
+                        <input type="checkbox" name="Hobbies" id="" value="Music">
+                        <label for="">Music</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Movies">
+                        <label for="">Movies</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Sports">
+                        <label for="">Sports</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Travel">
+                        <label for="">Travel</label>
+                    </div>
+                </div>
+
+                <!-- <div class="inputfield">
+                    <label>Upload Photo</label>
+                    <p id="file-size">*Max size 100kb.</p>
+                    <input type="file" name="myfile" id="studentPhoto" placeholder="Upload your photo" rows="7"
+                        required />
+
+                </div> -->
+
+                <div class="inputfield terms">
+                    <label class="check">
+                        <input type="checkbox" name="check" value="Declared" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>I hereby declare that the above information provided is true and correct.</p>
+                </div>
+
+                <div class="inputfield btns" id="btn">
+                    <button type="submit" value="Register" class="btn"">Enroll Now</button>
+                    <button type=" reset" value="Reset" class="btn">Reset</button>
+                </div>
+
             </div>
-            <div class="text-justify mt-4">
-                <p>Ready to dive into the world of programming excellence? Enroll in our C-Programming course today and
-                    embark on a journey of coding mastery!</p>
-            </div>
-        </div>
-    </section>
-    <!-- Content End -->
-
-
-
+        </form>
+    </div>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -330,8 +411,9 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <script src="../js/security.js"></script>
+    <!-- <script src="../js/security.js"></script> -->
     <script src="../js/newsletter.js" type="module"></script>
+    <script type="module" src="../js/c-enrollment.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
