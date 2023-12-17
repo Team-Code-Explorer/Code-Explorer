@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>C-Programming Introduction || Code Explorer</title>
+    <title>C++ Programming Enrollment Form || Code Explorer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- SEO -->
@@ -36,15 +36,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/security.css">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/security.css">
+    <link rel="stylesheet" href="../css/enrollment.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="https://explorecode.live" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="../../img/code-xplorer.png" alt="" style="height: 70%;">
+            <img src="../img/code-xplorer.png" alt="" style="height: 70%;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -69,25 +70,25 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="https://explorecode.live" class="nav-item nav-link active">Home</a>
-                <a href="../../about" class="nav-item nav-link">About</a>
-                <a href="../../courses" class="nav-item nav-link">Courses</a>
-                <a href="../../Code-Explorer.apk" class="nav-item nav-link">Download APP</a>
+                <a href="../about" class="nav-item nav-link">About</a>
+                <a href="../courses" class="nav-item nav-link">Courses</a>
+                <a href="../Code-Explorer.apk" class="nav-item nav-link">Download APP</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="../../team" class="dropdown-item">Our Team</a>
-                        <a href="../../testimonial" class="dropdown-item">Testimonial</a>
-                        <a href="../../404" class="dropdown-item">404 Page</a>
+                        <a href="../team" class="dropdown-item">Our Team</a>
+                        <a href="../testimonial" class="dropdown-item">Testimonial</a>
+                        <a href="../404" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="../../contact" class="nav-item nav-link">Contact</a>
+                <a href="../contact" class="nav-item nav-link">Contact</a>
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
                     <div class="dropdown-menu fade-down m-0">
                         <span id="userName" class="dropdown-item" style="display: none;"></span>
-                        <a href="../../login" id="loginLink" class="dropdown-item">Login</a>
-                        <a href="../../register" id="registerLink" class="dropdown-item">Register</a>
+                        <a href="../login" id="loginLink" class="dropdown-item">Login</a>
+                        <a href="../register" id="registerLink" class="dropdown-item">Register</a>
                         <button id="logoutBtn" style="display: none;" class="dropdown-item">Logout</button>
                     </div>
                 </div>
@@ -98,6 +99,7 @@
         </div>
     </nav>
     <!-- Navbar End -->
+
 
     <!-- Script to dynamically update the navbar based on user authentication -->
     <script type="module">
@@ -137,7 +139,7 @@
             localStorage.removeItem('user-info');
             localStorage.removeItem('user-creds');
             // Redirect to the register page
-            window.location.href = '../../register';
+            window.location.href = '../register';
         }
 
         // Call this function when the page loads to initialize the navbar
@@ -147,67 +149,159 @@
         document.getElementById('logoutBtn').addEventListener('click', handleLogout);
     </script>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary back mb-5 page-header img-fluid">
-        <div class="container back">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">What Is Programming ?</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="https://explorecode.live">Home</a>
-                            </li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"><a class="text-white"
-                                    href="../../c-programming">C Programming</a></li>
-                                    <li class="breadcrumb-item"><a class="text-white" href="../../c-programming/Introduction-to-C-Programming">Introduction To C Programming</a>
-                                    </li>
-                                    <li class="breadcrumb-item text-white active" aria-current="page"><a class="text-white"
-                                            href="../../c-programming/Introduction-to-C-Programming/what-is-programming">What Is Programming ?</a></li>
-                        </ol>
-                    </nav>
+
+    <!-- Registration Form Start -->
+    <div class="wrapper">
+        <div class="title">Student Registration Form C++
+        </div>
+        <form id="cEnrollment">
+            <div class="form">
+
+                <div class="inputfield">
+                    <label>First Name</label>
+                    <input type="text" class="input" id="fname" name="fname" placeholder="Enter first name"
+                        maxlength="30" title="Enter only alphabets" required>
                 </div>
+
+                <div class="inputfield">
+                    <label>Last Name</label>
+                    <input type="text" class="input" id="lname" name="lname" placeholder="Enter last name"
+                        maxlength="30" title="Enter only alphabets" required>
+                </div>
+
+                <div class="inputfield" id="gender">
+                    <label for="">Gender</label>
+                    <input type="radio" name="gender" id="radio" value="Male">Male
+                    <input type="radio" name="gender" id="radio" value="Female">Female
+                </div>
+
+                <div class="inputfield">
+                    <label for="">Age</label>
+                    <input type="text" class="input" name="age" id="age" placeholder="Enter your age" maxlength="2"
+                        required>
+                </div>
+
+
+                <div class="inputfield">
+                    <label for="">Date of Birth</label>
+                    <input type="date" class="input" id="dob" name="dob" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="email" class="input" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+
+
+                <div class="inputfield">
+                    <label for="">Phone Number</label>
+                    <div class="custom-select" id="phone-codes">
+                        <select id="phone-code">
+                            <option value="+91">+91</option>
+                        </select>
+                    </div>
+                    <input type="tel" class="input" name="phone-number" maxlength="10" id="phone-number"
+                        placeholder="Enter your phone number" title="Please enter valid phone number" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>Address</label>
+                    <textarea class="textarea" name="address" id="address" cols="30" rows="5"
+                        placeholder="Enter your address" maxlength="100" required></textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>State</label>
+                    <div class="custom_select">
+                        <select id="state" name="state" required>
+                            <option value="">--Select your state--</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label>Pin Code</label>
+                    <input type="text" class="input" id="pincode" name="pincode" placeholder="Enter your pin code"
+                        maxlength="6" required>
+                </div>
+
+                <div class="inputfield" id="hobbies">
+                    <label for="">Hobbies</label>
+                    <div class="hobbies">
+                        <input type="checkbox" name="Hobbies" id="" value="Music">
+                        <label for="">Music</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Movies">
+                        <label for="">Movies</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Sports">
+                        <label for="">Sports</label>
+                        <input type="checkbox" name="Hobbies" id="" value="Travel">
+                        <label for="">Travel</label>
+                    </div>
+                </div>
+
+                <!-- <div class="inputfield">
+                    <label>Upload Photo</label>
+                    <p id="file-size">*Max size 100kb.</p>
+                    <input type="file" name="myfile" id="studentPhoto" placeholder="Upload your photo" rows="7"
+                        required />
+
+                </div> -->
+
+                <div class="inputfield terms">
+                    <label class="check">
+                        <input type="checkbox" name="check" value="Declared" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>I hereby declare that the above information provided is true and correct.</p>
+                </div>
+
+                <div class="inputfield btns" id="btn">
+                    <button type="submit" value="Register" class="btn"">Enroll Now</button>
+                    <button type=" reset" value="Reset" class="btn">Reset</button>
+                </div>
+
             </div>
-        </div>
+        </form>
     </div>
-    <!-- Header End -->
-
-    <!-- Content Start -->
-    <div class="section">
-        <div class="container">
-            <div class="text-center mb-5 mt-3">
-                <h1 class="fw-bold">What is Programming?</h1>
-                <p class="text-muted">Unlock the power of programming with Code Explorer's comprehensive C-Programming
-                    course.</p>
-            </div>
-            <div class="text-justify">
-                <p>Programming is the art and science of instructing a computer to perform specific tasks through a set
-                    of carefully crafted instructions. These instructions, commonly known as code, are written in
-                    programming languages that computers can understand and execute.</p>
-
-                <p>Think of programming as a means of communication between humans and computers. Humans use programming
-                    languages to convey a series of logical steps to a computer, instructing it on how to solve
-                    problems, process data, or perform various operations.</p>
-
-                <p>In the world of programming, precision and clarity are paramount. A single misplaced character or
-                    misunderstood command can lead to errors, emphasizing the need for careful attention to detail. The
-                    process of creating error-free and efficient code is both a challenge and a rewarding experience for
-                    programmers.</p>
-
-                <p>Programming languages, such as C, provide a structured and systematic way to express algorithms and
-                    solutions. These languages vary in syntax and features, but they all serve the common purpose of
-                    enabling humans to communicate with computers effectively.</p>
-
-                <p>Whether you're creating software applications, developing websites, or working on complex algorithms,
-                    programming is the key to unlocking the potential of modern technology. It empowers individuals to
-                    automate tasks, solve problems, and innovate in various fields.</p>
-
-                <p>As you embark on your journey into the world of programming through Code Explorer's C-Programming
-                    course, you'll gain valuable insights into the foundations of coding and the principles that drive
-                    the digital age.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Content End -->
+    <!-- Registration Form End -->
 
 
     <!-- Footer Start -->
@@ -216,12 +310,12 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../about">About Us</a>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../contact">Contact Us</a>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../privacy-policy">Privacy Policy</a>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../terms">Terms & Condition</a>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../faq">FAQs & Help</a>
-                    <a style="color: #fc9506;" class="btn btn-link" href="../../team">Our Team</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../about">About Us</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../contact">Contact Us</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../privacy-policy">Privacy Policy</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../terms">Terms & Condition</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../faq">FAQs & Help</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="../team">Our Team</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -258,27 +352,27 @@
                     <h4 class="text-white mb-3">Technologies</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/cpp.png" alt="C++"
+                            <img class="img-fluid bg-light p-1" src="../img/cpp.png" alt="C++"
                                 style="border-radius: 10px;">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/python.png" alt="Python"
+                            <img class="img-fluid bg-light p-1" src="../img/python.png" alt="Python"
                                 style="border-radius: 10px;">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/javascript.png" alt="JavaScript"
+                            <img class="img-fluid bg-light p-1" src="../img/javascript.png" alt="JavaScript"
                                 style="border-radius: 10px;">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/react.png" alt="React.js"
+                            <img class="img-fluid bg-light p-1" src="../img/react.png" alt="React.js"
                                 style="border-radius: 10px;">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/mongodb.png" alt="MongoDB"
+                            <img class="img-fluid bg-light p-1" src="../img/mongodb.png" alt="MongoDB"
                                 style="border-radius: 10px;">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="../../img/git.png" alt="Git Bash"
+                            <img class="img-fluid bg-light p-1" src="../img/git.png" alt="Git Bash"
                                 style="border-radius: 10px;">
                         </div>
                     </div>
@@ -312,9 +406,9 @@
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <a href="https://explorecode.live">Home</a>
-                            <a href="../../contact">Contact</a>
-                            <a href="../../help">Help</a>
-                            <a href="../../faq">FQAs</a>
+                            <a href="../contact">Contact</a>
+                            <a href="../help">Help</a>
+                            <a href="../faq">FQAs</a>
                         </div>
                     </div>
                 </div>
@@ -331,15 +425,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../lib/wow/wow.min.js"></script>
-    <script src="../../lib/easing/easing.min.js"></script>
-    <script src="../../lib/waypoints/waypoints.min.js"></script>
-    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../../js/main.js"></script>
-    <!-- <script src="../../js/security.js"></script> -->
-    <script src="../../js/newsletter.js" type="module"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/security.js"></script>
+    <script src="../js/newsletter.js" type="module"></script>
+    <script type="module" src="../js/cpp-enrollment.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
