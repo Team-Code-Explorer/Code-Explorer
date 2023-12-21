@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>What Is Programming || Code Explorer</title>
+    <title>Pseudocode & Flowchart || Code Explorer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- SEO -->
@@ -45,6 +45,21 @@
     <!-- Template Stylesheet -->
     <link href="../../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/security.css">
+    <style>
+.highlight-code {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.language-pseudocode {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #008080;
+    white-space: pre-wrap;
+}
+    </style>
 </head>
 
 <body>
@@ -152,7 +167,7 @@
         <div class="container back">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">What Is Programming ?</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Pseudocode & Flowchart</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="https://explorecode.live">Home</a>
@@ -164,8 +179,8 @@
                                     Programming</a>
                             </li>
                             <li class="breadcrumb-item text-white active" aria-current="page"><a class="text-white"
-                                    href="../../cpp-programming/Introduction-to-CPP-Programming/what-is-programming">What
-                                    Is Programming ?</a></li>
+                                    href="../../cpp-programming/Introduction-to-CPP-Programming/pseudocode-and-flowchart">Pseudocode
+                                    & Flowchart</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -176,47 +191,64 @@
 
 
     <!-- Content Start -->
-    <div class="section">
+    <section class="section">
         <div class="container">
             <div class="text-center mb-5 mt-3">
-                <h1 class="fw-bold">What is Programming?</h1>
-                <p class="text-muted">Unlock the power of programming with Code Explorer's comprehensive C++ Programming
-                    course.</p>
+                <h1 class="fw-bold">Understanding Pseudocode and Flowcharts</h1>
+                <p class="text-muted">Demystifying the tools used in programming planning and design.</p>
             </div>
             <div class="text-justify">
-                <p>Programming is the art and science of instructing a computer to perform specific tasks through a set
-                    of carefully crafted instructions. These instructions, commonly known as code, are written in
-                    programming languages that computers can understand and execute.</p>
+                <p>Before diving into actual coding, developers often use pseudocode and flowcharts as essential tools
+                    for planning and designing algorithms. These tools provide a visual representation and a structured
+                    description of the logic behind a program.</p>
 
-                <p>Think of programming as a means of communication between humans and computers. Humans use programming
-                    languages to convey a series of logical steps to a computer, instructing it on how to solve
-                    problems, process data, or perform various operations.</p>
+                <h2 class="fw-bold mt-4">Pseudocode</h2>
+                <p>Pseudocode is a high-level description of a computer program or algorithm that uses a mixture of
+                    natural language and basic programming constructs. It provides a way for developers to outline the
+                    steps of an algorithm without getting into the specifics of a particular programming language. The
+                    goal is clarity and understanding rather than strict syntax.</p>
 
-                <p>In the world of programming, precision and clarity are paramount. A single misplaced character or
-                    misunderstood command can lead to errors, emphasizing the need for careful attention to detail. The
-                    process of creating error-free and efficient code is both a challenge and a rewarding experience for
-                    programmers.</p>
+                <p>Here's an example of pseudocode for a simple algorithm to find the maximum of two numbers:</p>
 
-                <p>Programming languages, such as C++, provide a structured and systematic way to express algorithms and
-                    solutions. These languages vary in syntax and features, but they all serve the common purpose of
-                    enabling humans to communicate with computers effectively.</p>
+                <div class="highlight-code">
+                    <pre>
+            <code class="language-pseudocode">
+                Procedure FindMaxNumber(num1, num2)
+                If num1 > num2 Then
+                    MaxNumber = num1
+                Else
+                    MaxNumber = num2
+                End If
+                    Return MaxNumber
+                End Procedure
+                        </code>
+                    </pre>
+                </div>
 
-                <p>Whether you're creating software applications, developing websites, or working on complex algorithms,
-                    programming is the key to unlocking the potential of modern technology. It empowers individuals to
-                    automate tasks, solve problems, and innovate in various fields.</p>
+                <h2 class="fw-bold mt-4">Flowcharts</h2>
+                <p>Flowcharts are graphical representations of a process, displaying the steps and decision points in a
+                    systematic way. Different shapes represent different elements, such as rectangles for processes,
+                    diamonds for decisions, and arrows for the flow of control. Flowcharts provide a visual guide that
+                    helps developers understand the flow of a program's logic.</p>
 
-                <p>As you embark on your journey into the world of programming through Code Explorer's C++ Programming
-                    course, you'll gain valuable insights into the foundations of coding and the principles that drive
-                    the digital age.</p>
+                <div class="text-center mt-4">
+                    <img src="../../img/pseduocode-1.png" alt="Pseudocode and Flowchart Example"
+                        class="img-fluid rounded">
+                </div>
+
+                <p>As shown in the example above, the flowchart visually represents the same algorithm we described
+                    earlier in pseudocode. Each shape and arrow correspond to a specific action or decision point,
+                    making it easier to comprehend the logic flow of the program.</p>
             </div>
             <!-- Buttons Start -->
             <div class="text-center mt-4">
-                <a href="../introduction" class="btn btn-primary btn-lg me-3">Go Back</a>
-                <a href="../Introduction-to-CPP-Programming/pseudocode-and-flowchart" class="btn btn-outline-primary btn-lg">Next</a>
+                <a href="../Introduction-to-CPP-Programming/what-is-programming" class="btn btn-primary btn-lg me-3">Go
+                    Back</a>
+                <a href="#" class="btn btn-outline-primary btn-lg">Next</a>
             </div>
             <!-- Buttons End -->
         </div>
-    </div>
+    </section>
     <!-- Content End -->
 
 
@@ -348,7 +380,7 @@
 
     <!-- Template Javascript -->
     <script src="../../js/main.js"></script>
-    <script src="../../js/security.js"></script>
+    <!-- <script src="../../js/security.js"></script> -->
     <script src="../../js/newsletter.js" type="module"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
