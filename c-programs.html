@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Important C Programs || Code Explorer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="msvalidate.01" content="EC027CE1D551C917CCFA6E49D87FA4E3" />
+
+    <!-- SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Unlock coding mastery with Code Explorer. Online courses, expert instructors, and real projects. Elevate your programming skills today!">
+    <meta name="keywords"
+        content="Code Explorer, coding courses, programming, online learning, coding projects, Pabitra Banerjee">
+    <meta name="author" content="Pabitra Banerjee">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" content="Code Explorer">
+    <meta name="og:description"
+        content="Elevate your programming skills with Code Explorer. Online courses, expert instructors, and real projects.">
+    <meta name="og:image" content="https://explorecode.live/img/code-xplore-logo.png">
+    <meta name="og:url" content="https://explorecode.live">
+    <meta name="og:site_name" content="Code Explorer">
+    <!-- Favicon -->
+    <link href="https://explorecode.live/img/ce.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Add this line in the head section of your HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"> -->
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/security.css">
+    <link rel="stylesheet" href="css/c-programs.css">
+    <link rel="stylesheet" href="css/rainbow.css">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="https://explorecode.live" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/code-xplorer.png" alt="" style="height: 70%;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="https://explorecode.live" class="nav-item nav-link">Home</a>
+                <a href="agi-research" class="nav-item nav-link">AGI Research</a>
+                <a href="about" class="nav-item nav-link">About Us</a>
+                <a href="Code-Explorer.apk" class="nav-item nav-link">Download APP</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team" class="dropdown-item">Our Team</a>
+                        <a href="courses" class="dropdown-item">Courses</a>
+                        <a href="testimonial" class="dropdown-item">Testimonial</a>
+                        <a href="404" class="dropdown-item">404 Page</a>
+                        <a href="c-programs" class="dropdown-item active">C Programs</a>
+                    </div>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <span id="userName" class="dropdown-item" style="display: none;"></span>
+                        <a href="login" id="loginLink" class="dropdown-item">Login</a>
+                        <a href="register" id="registerLink" class="dropdown-item">Register</a>
+                        <button id="logoutBtn" style="display: none;" class="dropdown-item">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <a href="https://devlinecommunity.wixsite.com/dev-line-community"
+                class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary back mb-5 page-header img-fluid" style="margin-bottom: 0px !important;">
+        <div class="container back">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="https://explorecode.live">Home</a>
+                            </li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">C Programs</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Script to dynamically update the navbar based on user authentication -->
+    <script type="module">
+        // Function to check if the user is logged in
+        function isUserLoggedIn() {
+            // Implement your logic to check if the user is logged in
+            // For example, check if the user is stored in localStorage
+            return localStorage.getItem('user-info') !== null;
+        }
+
+        // Function to update the navbar based on user authentication
+        function updateNavbar() {
+            const userName = document.getElementById('userName');
+            const loginLink = document.getElementById('loginLink');
+            const registerLink = document.getElementById('registerLink');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (isUserLoggedIn()) {
+                const userInfo = JSON.parse(localStorage.getItem('user-info'));
+                userName.textContent = `Welcome, ${userInfo.firstName}!`;
+                userName.style.display = 'inline-block';
+                loginLink.style.display = 'none';
+                registerLink.style.display = 'none';
+                logoutBtn.style.display = 'inline-block';
+            } else {
+                userName.style.display = 'none';
+                loginLink.style.display = 'inline-block';
+                registerLink.style.display = 'inline-block';
+                logoutBtn.style.display = 'none';
+            }
+        }
+
+        // Function to handle logout
+        function handleLogout() {
+            // Implement logout logic
+            // For example, remove user data from localStorage
+            localStorage.removeItem('user-info');
+            localStorage.removeItem('user-creds');
+            // Redirect to the register page
+            window.location.href = 'register';
+        }
+
+        // Call this function when the page loads to initialize the navbar
+        updateNavbar();
+
+        // Add click event listener for the logout button
+        document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+    </script>
+
+    <!-- Add this section for each question -->
+    <!-- Question 1 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 1: Find the largest number among the three numbers.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code1')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code1" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C Program to find 
+            // Largest of three numbers 
+            #include <stdio.h> 
+            
+            int main() { 
+                int a = 1, b = 2, c = 3; 
+            
+                // condition for a is greatest                          
+                if (a > b && a > c) 
+                    printf("%d", a); 
+            
+                // condition for b is greatest                          
+                else if (b > a && b > c) 
+                    printf("%d", b); 
+            
+                // remaining conditions 
+                // c is greatest 
+                else
+                    printf("%d", c); 
+            
+                return 0; 
+            }
+            
+    </code></pre>
+    </div>
+    <!-- Question 1 End -->
+
+    <!-- Question 2 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 2: Write a Program to check whether a number is prime or not.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code2')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code2" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C Program for 
+            // Checking value is 
+            // Prime or not 
+            #include <stdio.h> 
+            
+            int main() { 
+                int N = 91; 
+                int flag = 0; 
+            
+                // Iterate from 2 to N/2 
+                for (int i = 2; i <= N / 2; i++) { 
+            
+                    // If n is divisible by any number between 2 and 
+                    // n/2, it is not prime 
+                    if (N % i == 0) { 
+                        flag = 1; 
+                        break; 
+                    } 
+                } 
+            
+                if (flag == 0) 
+                    printf("Not a Prime Number"); 
+                else
+                    printf("Is a Prime Number"); 
+                return 0; 
+            }
+    </code></pre>
+    </div>
+    <!-- Question 2 End -->
+
+    <!-- Question 3 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 3: Write a C program to calculate Compound Interest.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code3')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code3" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C program to calculate Compound Interest 
+            #include <stdio.h> 
+            
+            // For using pow function we must 
+            // include math.h 
+            #include <math.h> 
+            
+            // Driver code 
+            int main() 
+            { 
+                // Principal amount 
+                double principal = 2300; 
+            
+                // Annual rate of interest 
+                double rate = 7; 
+            
+                // Time 
+                double time = 4; 
+            
+                // Calculating compound Interest 
+                double amount 
+                    = principal * ((pow((1 + rate / 100), time))); 
+                double CI = amount - principal; 
+            
+                printf("Compound Interest is : %lf", CI); 
+                return 0; 
+            }
+            
+        </code></pre>
+    </div>
+    <!-- Question 3 End -->
+
+    <!-- Question 4 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 4: Write a Program in C to Swap the values of two variables without
+            using any extra variable.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code4')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code4" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C Program to 
+            // Swap two numbers 
+            // No Extra Space 
+            #include <stdio.h> 
+            
+            int main() 
+            { 
+            
+                int x = 10; 
+                int y = 20; 
+            
+                printf("x: %d , y: %d\n", x, y);                   
+            
+                // Code to swap 'x' and 'y' 
+                x = x + y; 
+                y = x - y; 
+                x = x - y; 
+            
+                printf("x: %d , y: %d\n", x, y); 
+            
+                return 0; 
+            }
+            
+            </code></pre>
+    </div>
+    <!-- Question 4 End -->
+
+    <!-- Question 5 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 5: Write a Program to Replace all 0’s with 1’s in a Number.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code5')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code5" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C Program for 
+            // Replacing 0 to 1 
+            #include <math.h> 
+            #include <stdio.h> 
+            
+            int main() 
+            { 
+                int N = 102301; 
+            
+                int ans = 0; 
+                int i = 0; 
+                while (N != 0) { 
+                    // Condition to change value 
+                    if (N % 10 == 0) 
+                        ans = ans + 1 * pow(10, i); 
+                    else
+                        ans = ans + (N % 10) * pow(10, i);        
+            
+                    N = N / 10; 
+                    i++; 
+                } 
+            
+                printf("%d", ans); 
+            
+                return 0; 
+            }
+            
+                </code></pre>
+    </div>
+    <!-- Question 5 End -->
+
+    <!-- Question 6 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 6: Write a Program to convert the binary number into a decimal
+            number.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code6')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code6" class="code-block hljs-c" style="display: none;"><code data-language="c">
+            // C Program for converting 
+            // binary to decimal 
+            #include <stdio.h> 
+            
+            int main() 
+            { 
+                int N = 11011; 
+            
+                // Initializing base value a to 1                
+                int a = 1; 
+                int ans = 0; 
+                while (N != 0) { 
+                    ans = ans + (N % 10) * a; 
+                    N = N / 10; 
+                    a = a * 2; 
+                } 
+            
+                printf("%d", ans); 
+                return 0; 
+            }
+            
+                </code></pre>
+    </div>
+    <!-- Question 6 End -->
+
+    <!-- Question 7 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 7: Write a Program to check if the year is a leap year or not.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code7')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code7" class="code-block hljs-c" style="display: none;"><code data-language="c">
+        // C Program to check 
+        // Year is leap year or not 
+        #include <stdio.h> 
+
+        // Function Declaration to check leap year 
+        void leap_year(int year) { 
+	        // If a year is multiple of 400, then leap year
+	        if (year % 400 == 0) 
+		        printf("%d is a leap year.\n", year); 
+
+	        // If a year is multiple of 100, then not a leap year
+	        else if (year % 100 == 0) 
+		        printf("%d is not a leap year.\n", year); 
+            
+	        // If a year is multiple of 4, then leap year 
+	        else if (year % 4 == 0) 
+		        printf("%d is a leap year.\n", year); 
+
+	        // Not leap year 
+	        else
+		        printf("%d is not a leap year.\n", year);
+        } 
+
+        int main() { 
+	        leap_year(2000); 
+	        leap_year(2002); 
+	        leap_year(2008); 
+
+	        return 0; 
+        }
+
+                </code></pre>
+    </div>
+    <!-- Question 7 End -->
+
+    <!-- Question 8 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 8: Write a program to Factorial of a Number.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code8')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code8" class="code-block hljs-c" style="display: none;"><code data-language="c">
+    // C Program to calculate 
+    // Factorial of a number 
+    #include <stdio.h> 
+    
+    // Calculating factorial using iteration 
+    void factorial_iteration(int N) { 
+        unsigned long long int ans = 1; 
+        for (int i = 1; i <= N; i++) { 
+            ans = ans * i; 
+        } 
+            
+        printf("Factorial of %d is %lld\n", N, ans); 
+    } 
+    
+    // Calculating factorial using recursion 
+    int factorial(int N) { 
+        if (N == 0) 
+            return 1; 
+            
+        // Recursive call 
+        return N * factorial(N - 1); 
+    } 
+            
+    int main() { 
+        int n; 
+        n = 13; 
+        factorial_iteration(n); 
+            
+        n = 9; 
+        printf("Factorial of %d using recursion:%d\n", n, factorial(n)); 
+            
+        return 0; 
+    }            
+
+                </code></pre>
+    </div>
+    <!-- Question 8 End -->
+
+    <!-- Question 9 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 9: Write a Program to Check if a number is an Armstrong number or not.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code9')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code9" class="code-block hljs-c" style="display: none;"><code data-language="c">
+        // C program to check if number 
+        // is Armstrong number or not 
+        #include <stdio.h> 
+
+        // Function to calculate x raised to the power y 
+        int power(int x, unsigned int y) { 
+	        if (y == 0) 
+		        return 1; 
+	        if (y % 2 == 0) 
+		        return power(x, y / 2) * power(x, y / 2);       
+
+	        return x * power(x, y / 2) * power(x, y / 2); 
+        } 
+
+        // Function to calculate order of the number 
+        int order(int n) { 
+	        int res = 0; 
+	        while (n) { 
+		        res++; 
+		        n = n / 10; 
+	        } 
+	        return res; 
+        } 
+
+        // Function to check whether the given number is 
+        // Armstrong number or not 
+        int isArmstrong(int x) { 
+	        // Calling order function 
+	        int n = order(x); 
+	        int temp = x, sum = 0; 
+	        while (temp) { 
+		        int r = temp % 10; 
+		        sum += power(r, n); 
+		        temp = temp / 10; 
+	        } 
+
+	        // If satisfies Armstrong condition 
+	        if (sum == x) 
+		        return 1; 
+	        else
+		        return 0; 
+        } 
+
+        // Driver Program 
+        int main() { 
+	        int x = 120; 
+	        if (isArmstrong(x) == 1) 
+		        printf("True\n"); 
+	        else
+		        printf("False\n"); 
+
+	        x = 1634; 
+	        if (isArmstrong(x) == 1) 
+		        printf("True\n"); 
+	        else
+		        printf("False\n"); 
+
+	        return 0; 
+        }
+
+        </code></pre>
+    </div>
+    <!-- Question 9 End -->
+
+    <!-- Question 10 Start -->
+    <div class="question">
+        <p class="question-text qs-padding">Question 10: Write a program to Find all the roots of a quadratic equation in C.</p>
+        <button class="toggle-code-btn" onclick="toggleCode('code10')" style="margin-left: 0px;">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <pre id="code10" class="code-block hljs-c" style="display: none;"><code data-language="c">
+        // C program to find roots 
+        // of a quadratic equation 
+        #include <math.h> 
+        #include <stdio.h> 
+        #include <stdlib.h> 
+
+        // Prints roots of quadratic equation ax*2 + bx + x 
+        void find_roots(int a, int b, int c) { 
+	        // If a is 0, then equation is not quadratic, but 
+	        // linear 
+	        if (a == 0) { 
+		        printf("Invalid"); 
+		        return; 
+	        } 
+
+	        int d = (b * b) - (4 * a * c); 
+	        double sqrt_val = sqrt(abs(d)); 
+
+	        if (d > 0) { 
+		        printf("Roots are real and different \n"); 
+		        printf("%f\n%f", (double)(-b + sqrt_val) / (2 * a), 
+			        (double)(-b - sqrt_val) / (2 * a)); 
+	        } 
+	        else if (d == 0) { 
+		        printf("Roots are real and same \n"); 
+		        printf("%f", -(double)b / (2 * a)); 
+	        } 
+	        else // d < 0 
+	        { 
+		        printf("Roots are complex \n"); 
+		        printf("%f + i%f\n%f - i%f", -(double)b / (2 * a), 
+			        sqrt_val / (2 * a), -(double)b / (2 * a), 
+			        sqrt_val / (2 * a)); 
+	        } 
+        } 
+
+        // Driver code 
+        int main() { 
+	        int a = 1, b = -16, c = 1; 
+
+	        // Function call 
+	        find_roots(a, b, c); 
+	        return 0; 
+        }
+
+    </code></pre>
+    </div>
+    <!-- Question 10 End -->
+    <!-- Add more questions as needed -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a style="color: #fc9506;" class="btn btn-link" href="about">About Us</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="contact">Contact Us</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="privacy-policy">Privacy Policy</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="terms">Terms & Condition</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="faq">FAQs & Help</a>
+                    <a style="color: #fc9506;" class="btn btn-link" href="team">Our Team</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <a style="color: white;" href="#">
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"
+                                style="color: white !important;"></i>Manbazar, Purulia</p>
+                    </a>
+                    <a style="color: #fc9506;" href="tel:+91-9064485906">
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"
+                                style="color: white !important;"></i>+91-9064485906</p>
+                    </a>
+                    <a style="color: #fc9506;" href="mailto:support@explorecode.live">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"
+                                style="color: white !important;"></i>support@explorecode.live</p>
+                    </a>
+                    <a style="color: #fc9506;" href="https://wa.me/+919064485906">
+                        <p class="mb-2"><i class="fab fa-whatsapp me-3"
+                                style="color: white !important;"></i>+91-9064485906</p>
+                    </a>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/Team-Code-Explorer"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/ExploreCodeWiki"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ExploreCodeWorld"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@Explore-Code"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/company/explore-code"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Technologies</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/cpp.png" alt="C++"
+                                style="border-radius: 10px;">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/python.png" alt="Python"
+                                style="border-radius: 10px;">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/javascript.png" alt="JavaScript"
+                                style="border-radius: 10px;">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/react.png" alt="React.js"
+                                style="border-radius: 10px;">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/mongodb.png" alt="MongoDB"
+                                style="border-radius: 10px;">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/git.png" alt="Git Bash"
+                                style="border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Subscribe to our newsletter to get latest updates.</p>
+                    <br />
+                    <br />
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Email"
+                            id="newsLetter">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2023-2024 :: <a class="border-bottom" href="https://explorecode.live">Code Explorer</a>,
+                        All
+                        Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://pabitrabanerjee.me">Pabitra
+                            Banerjee</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://mbwebbers.tech">MB WEBBER'S</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="https://explorecode.live">Home</a>
+                            <a href="contact">Contact</a>
+                            <a href="help">Help</a>
+                            <a href="faq">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    and it's easy to individually load additional languages
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script> -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/rainbow.js"></script>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/c.js"></script>
+    <script src="js/c-program.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- <script src="js/security.js"></script> -->
+    <script src="js/newsletter.js" type="module"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6575f59b07843602b80046d0/1hhaceqq1';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

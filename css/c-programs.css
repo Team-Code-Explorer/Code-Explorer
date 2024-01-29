@@ -1,0 +1,47 @@
+/* Question and button styling */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #61dafb;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.question-text {
+    margin: 0; /* Remove default margin for paragraphs */
+    margin-bottom: 5px !important;
+}
+
+.toggle-code-btn {
+    background-color: #61dafb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin between question text and button */
+}
+
+/* Code block styling */
+.code-block {
+    /* background-color: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px; */
+    overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+    /* white-space: pre-wrap; */
+    margin-top: 10px;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 600px) {
+    .code-block {
+        font-size: 14px;
+        overflow-x: scroll;
+    }
+
+    .question {
+        align-items: stretch;
+    }
+}
