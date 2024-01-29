@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #61dafb;
+    color: #e10d3e;
     flex-direction: column;
     padding: 20px;
 }
@@ -11,10 +11,13 @@
 .question-text {
     margin: 0; /* Remove default margin for paragraphs */
     margin-bottom: 5px !important;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .toggle-code-btn {
-    background-color: #61dafb;
+    background-color: #08b77a;
     color: #ffffff;
     border: none;
     padding: 10px 15px;
