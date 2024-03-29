@@ -1,0 +1,158 @@
+/* Main CSS */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menu,
+.dropdowna-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li,
+.dropdowna-menu li {
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li a,
+.dropdowna-menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdowna-menu {
+    display: none;
+    background-color: #f0f0f0;
+    width: 70%;
+    height: 300px;
+    /* Adjust height as needed */
+    float: left;
+    overflow-y: auto;
+}
+
+/* For small and medium screen sizes */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 1;
+        left: 0;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .sidebar.open .menu {
+        display: block;
+    }
+
+    .dropdowna-menu {
+        display: none;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        background-color: #f0f0f0;
+        width: 40%;
+        height: 500px;
+        /* Adjust height as needed */
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .dropdowna.open .dropdowna-menu {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
+/* Hide dropdowna-menu for large screens */
+@media screen and (min-width: 769px) {
+    .dropdowna-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Scrollbar for .sidebar, .content, and .dropdowna-menu */
+.sidebar,
+.content,
+.dropdowna-menu {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    /* Width; Track color */
+}
+
+.sidebar::-webkit-scrollbar,
+.content::-webkit-scrollbar,
+.dropdowna-menu::-webkit-scrollbar {
+    width: 8px;
+    /* Width of scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track,
+.content::-webkit-scrollbar-track,
+.dropdowna-menu::-webkit-scrollbar-track {
+    background: transparent;
+    /* Track background */
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb,
+.dropdowna-menu::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Thumb color */
+    border-radius: 4px;
+    /* Roundness of thumb */
+    border: transparent;
+    /* Border around thumb */
+}
