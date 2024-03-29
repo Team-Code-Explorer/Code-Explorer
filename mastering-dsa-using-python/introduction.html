@@ -45,6 +45,7 @@
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/security.css">
+    <link rel="stylesheet" href="course-style.css">
 </head>
 
 <body>
@@ -77,7 +78,8 @@
                     <div class="dropdown-menu fade-down m-0">
                         <a href="../team" class="dropdown-item">Our Team</a>
                         <a href="../courses" class="dropdown-item">DSA In Python</a>
-                        <a href="../mastering-dsa-using-python/introduction" class="dropdown-item active">DSA In Python</a>
+                        <a href="../mastering-dsa-using-python/introduction" class="dropdown-item active">DSA In
+                            Python</a>
                         <a href="../testimonial" class="dropdown-item">Testimonial</a>
                         <a href="../c-programs" class="dropdown-item">C Programs</a>
                         <a href="../404" class="dropdown-item">404 Page</a>
@@ -150,99 +152,330 @@
         document.getElementById('logoutBtn').addEventListener('click', handleLogout);
     </script>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary back mb-5 page-header img-fluid">
-        <div class="container back">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Mastering DSA Using Python</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="https://explorecode.live">Home</a>
-                            </li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"><a class="text-white"
-                                    href="../mastering-dsa-using-python">Mastering DSA Using Python</a></li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+
+    <!-- Main Content Start -->
+    <div class="wrapper">
+        <button class="menu-toggle">Menu</button>
+        <div class="sidebar">
+            <!-- Sidebar content -->
+            <ul class="menu">
+                <li class="heading">Python Basics</li>
+                <li><a href="/python/index.htm">Python - Home</a></li>
+                <li><a href="/python/python_overview.htm">Python - Overview</a></li>
+                <li><a href="/python/python_history.htm">Python - History</a></li>
+                <li><a href="/python/python_features.htm">Python - Features</a></li>
+                <li><a href="/python/python_vs_cpp.htm">Python vs C++</a></li>
+                <li class="heading">Python Control Statements</li>
+                <li><a href="/python/python_control_flow.htm">Python - Control Flow</a></li>
+                <li><a href="/python/python_decision_making.htm">Python - Decision Making</a></li>
+                <li><a href="/python/python_if_statement.htm">Python - If Statement</a></li>
+                <li><a href="/python/python_if_else.htm">Python - If else</a></li>
+                <li><a href="/python/nested_if_statements_in_python.htm">Python - Nested If</a></li>
+                <li class="heading">Python Functions &amp; Modules</li>
+                <li><a href="/python/python_functions.htm">Python - Functions</a></li>
+                <li><a href="/python/python_default_arguments.htm">Python - Default Arguments</a></li>
+                <li><a href="/python/python_keyword_arguments.htm">Python - Keyword Arguments</a></li>
+                <li><a href="/python/python_keywordonly_arguments.htm">Python - Keyword-Only Arguments</a></li>
+                <li><a href="/python/python_positional_arguments.htm">Python - Positional Arguments</a></li>
+                <li class="heading">Python Strings</li>
+                <li><a href="/python/python_strings.htm">Python - Strings</a></li>
+                <li><a href="/python/python_slicing_strings.htm">Python - Slicing Strings</a></li>
+                <li><a href="/python/python_modify_strings.htm">Python - Modify Strings</a></li>
+                <li><a href="/python/python_string_concatenation.htm">Python - String Concatenation</a></li>
+                <li class="heading">Python Lists</li>
+                <li><a href="/python/python_lists.htm">Python - Lists</a></li>
+                <li><a href="/python/python_access_list_items.htm">Python - Access List Items</a></li>
+                <li><a href="/python/python_change_list_items.htm">Python - Change List Items</a></li>
+                <li><a href="/python/python_add_list_items.htm">Python - Add List Items</a></li>
+                <li><a href="/python/python_remove_list_items.htm">Python - Remove List Items</a></li>
+                <li><a href="/python/python_loop_lists.htm">Python - Loop Lists</a></li>
+                <li class="heading">Python Tuples</li>
+                <li><a href="/python/python_tuples.htm">Python - Tuples</a></li>
+                <li><a href="/python/python_access_tuple_items.htm">Python - Access Tuple Items</a></li>
+                <li><a href="/python/python_update_tuples.htm">Python - Update Tuples</a></li>
+                <li><a href="/python/python_unpack_tuples.htm">Python - Unpack Tuples</a></li>
+                <li><a href="/python/python_loop_tuples.htm">Python - Loop Tuples</a></li>
+                <li><a href="/python/python_join_tuples.htm">Python - Join Tuples</a></li>
+                <li><a href="/python/python_tuple_methods.htm">Python - Tuple Methods</a></li>
+                <li><a href="/python/python_tuple_exercises.htm">Python - Tuple Exercises</a></li>
+                <li class="heading">Python Sets</li>
+                <li><a href="/python/python_sets.htm">Python - Sets</a></li>
+                <li><a href="/python/python_access_set_items.htm">Python - Access Set Items</a></li>
+                <li><a href="/python/python_add_set_items.htm">Python - Add Set Items</a></li>
+                <li><a href="/python/python_remove_set_items.htm">Python - Remove Set Items</a></li>
+                <li><a href="/python/python_loop_sets.htm">Python - Loop Sets</a></li>
+                <li class="heading">Python Dictionaries</li>
+                <li><a href="/python/python_dictionaries.htm">Python - Dictionaries</a></li>
+                <li><a href="/python/python_access_dictionary_items.htm">Python - Access Dictionary Items</a></li>
+                <li><a href="/python/python_change_dictionary_items.htm">Python - Change Dictionary Items</a></li>
+                <li><a href="/python/python_add_dictionary_items.htm">Python - Add Dictionary Items</a></li>
+                <li><a href="/python/python_remove_dictionary_items.htm">Python - Remove Dictionary Items</a></li>
+                <li><a href="/python/python_dictionary_view_objects.htm">Python - Dictionary View Objects</a></li>
+                <li class="heading">Python Arrays</li>
+                <li><a href="/python/python_arrays.htm">Python - Arrays</a></li>
+                <li><a href="/python/python_access_array_items.htm">Python - Access Array Items</a></li>
+                <li><a href="/python/python_add_array_items.htm">Python - Add Array Items</a></li>
+                <li><a href="/python/python_remove_array_items.htm">Python - Remove Array Items</a></li>
+                <li><a href="/python/python_loop_arrays.htm">Python - Loop Arrays</a></li>
+                <li class="heading">Python File Handling</li>
+                <li><a href="/python/python_file_handling.htm">Python - File Handling</a></li>
+                <li><a href="/python/python_write_to_file.htm">Python - Write to File</a></li>
+                <li><a href="/python/python_read_files.htm">Python - Read Files</a></li>
+                <li><a href="/python/python_renaming_and_delete_files.htm">Python - Renaming and Deleting Files</a></li>
+                <li class="heading">Object Oriented Programming</li>
+                <li><a href="/python/python_oops_concepts.htm">Python - OOPs Concepts</a></li>
+                <li><a href="/python/python_object_classes.htm">Python - Object & Classes</a></li>
+                <li><a href="/python/python_class_attributes.htm">Python - Class Attributes</a></li>
+                <li><a href="/python/python_class_methods.htm">Python - Class Methods</a></li>
+                <li><a href="/python/python_static_methods.htm">Python - Static Methods</a></li>
+                <li><a href="/python/python_constructors.htm">Python - Constructors</a></li>
+                <li class="heading">Python Errors &amp; Exceptions</li>
+                <li><a href="/python/python_syntax_errors.htm">Python - Syntax Errors</a></li>
+                <li><a href="/python/python_exceptions.htm">Python - Exceptions</a></li>
+                <li><a href="/python/python_tryexcept_block.htm">Python - try-except Block</a></li>
+                <li><a href="/python/python_tryfinally_block.htm">Python - try-finally Block</a></li>
+                <li><a href="/python/python_raising_exceptions.htm">Python - Raising Exceptions</a></li>
+                <li class="heading">Python Multithreading</li>
+                <li><a href="/python/python_multithreading.htm">Python - Multithreading</a></li>
+                <li><a href="/python/python_thread_life_cycle.htm">Python - Thread Life Cycle</a></li>
+                <li><a href="/python/python_creating_thread.htm">Python - Creating a Thread</a></li>
+                <li><a href="/python/python_starting_thread.htm">Python - Starting a Thread</a></li>
+                <li><a href="/python/python_joining_threads.htm">Python - Joining Threads</a></li>
+                <li class="heading">Python Synchronization</li>
+                <li><a href="/python/python_interthread_communication.htm">Python - Inter-thread Communication</a></li>
+                <li><a href="/python/python_thread_deadlock.htm">Python - Thread Deadlock</a></li>
+                <li><a href="/python/python_interrupting_thread.htm">Python - Interrupting a Thread</a></li>
+                <li class="heading">Python Networking</li>
+                <li><a href="/python/python_networking.htm">Python - Networking</a></li>
+                <li><a href="/python/python_socket_programming.htm">Python - Socket Programming</a></li>
+                <li><a href="/python/python_url_processing.htm">Python - URL Processing</a></li>
+                <li><a href="/python/python_generics.htm">Python - Generics</a></li>
+                <li class="heading">Python Libraries</li>
+                <li><a href="/numpy/index.htm">NumPy Tutorial</a></li>
+                <li><a href="/python_pandas/index.htm">Pandas Tutorial</a></li>
+                <li><a href="/scipy/index.htm">SciPy Tutorial</a></li>
+                <li><a href="/matplotlib/index.htm">Matplotlib Tutorial</a></li>
+                <li><a href="/django/index.htm">Django Tutorial</a></li>
+                <li><a href="/opencv_python/index.htm">OpenCV Tutorial</a></li>
+                <li class="heading">Python Miscellenous</li>
+                <li><a href="/python/python_date_time.htm">Python - Date &amp; Time</a></li>
+                <li><a href="/python/python_maths.htm">Python - Maths</a></li>
+                <li><a href="/python/python_iterators.htm">Python - Iterators</a></li>
+                <li><a href="/python/python_generators.htm">Python - Generators</a></li>
+                <li><a href="/python/python_closures.htm">Python - Closures</a></li>
+                <li><a href="/python/python_decorators.htm">Python - Decorators</a></li>
+                <li><a href="/python/python_recursion.htm">Python - Recursion</a></li>
+                <li><a href="/python/python_reg_expressions.htm">Python - Reg Expressions</a></li>
+                <li><a href="/python/python_pip.htm">Python - PIP</a></li>
+                <li><a href="/python/python_guis.htm">Python - GUIs</a></li>
+                <!--<li class="heading">Python Questions and Answers</li>-->
+                <li class="heading">Python Useful Resources</li>
+                <li><a href="/online_python_compiler.php">Python Compiler</a></li>
+                <li><a href="/execute_numpy_online.php">NumPy Compiler</a></li>
+                <li><a href="/execute_matplotlib_online.php">Matplotlib Compiler</a></li>
+                <li><a href="/execute_scipy_online.php">SciPy Compiler</a></li>
+                <li><a href="/python/python_programming_examples.htm">Python - Programming Examples</a></li>
+                <li><a href="/python/python_quick_guide.htm">Python - Quick Guide</a></li>
+                <li><a href="/python/python_useful_resources.htm">Python - Useful Resources</a></li>
+                <li><a href="/python/python_discussion.htm">Python - Discussion</a></li>
+            </ul>
         </div>
-    </div>
-    <!-- Header End -->
-
-    <!-- Content Start -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center mb-5 mt-3">
-                <h1 class="fw-bold">Mastering DSA Using Python</h1>
-                <p class="text-muted">Unlock the potential of data structures and algorithms with Code Explorer's
-                    comprehensive Python course.</p>
-            </div>
-            <div class="text-justify">
-                <p>Welcome to the exciting journey of mastering Data Structures and Algorithms using Python. In this
-                    introductory video, we delve into the fundamentals of Python programming, laying the groundwork for
-                    your exploration into the world of DSA.</p>
-                <p>In this first installment, we cover:</p>
-                <ul>
-                    <li><b>Understanding Python</b>: We explore the origins of Python, its developers, and why it's essential
-                        to learn.</li>
-                    <li><b>Advantages and Disadvantages</b>: Learn about the strengths and weaknesses of Python compared to
-                        other programming languages.</li>
-                    <li><b>Python 2 vs. Python 3</b>: Understand the key differences between these two versions and their
-                        implications.</li>
-                    <li><b>Programming vs. Scripting</b>: Using Java and Python as examples, we distinguish between programming
-                        and scripting languages.</li>
-                    <li><b>Compiler vs. Interpreter</b>: Gain insights into how Python's interpreter differs from traditional
-                        compilers.</li>
-                    <li><b>Installation Guide</b>: Step-by-step instructions on installing Python from the official website and
-                        setting up VS Code IDE.</li>
-                    <li><b>Alternative for Limited Resources</b>: We also recommend <a href="https://replit.com">replit.com</a> for users with resource
-                        constraints.</li>
-                </ul>
-            </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <!-- Embed YouTube video here -->
-                    <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/WFhTdkN7rh4?si=3Eq3ehPxgB5yTwyo""
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+        <div class="content">
+            <div class="container">
+                <div class="text-center mb-5 mt-3">
+                    <h1 class="fw-bold">Mastering DSA Using Python</h1>
+                    <p class="text-muted">Unlock the potential of data structures and algorithms with Code Explorer's
+                        comprehensive Python course.</p>
                 </div>
-                <div class="col-lg-6 padding">
-                    <div class="text-justify">
-                        <p style="font-size: 30px; font-weight: 700; color: blue;">Why Python for DSA?</p>
-                        <ul class="list-unstyled padding">
-                            <li><i class="bi bi-check-circle text-primary"></i> Versatility and ease of use</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Extensive library support</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Rapid development and prototyping</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Community-driven ecosystem</li>
-                        </ul>
-
-                        <p style="font-size: 30px; font-weight: 700; color: blue;">What You'll Learn:</p>
-                        <ul class="list-unstyled padding">
-                            <li><i class="bi bi-check-circle text-primary"></i> Basics of Python syntax and structure
-                            </li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Setting up development environment</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Pythonic coding principles</li>
-                            <li><i class="bi bi-check-circle text-primary"></i> Introduction to DSA concepts</li>
-                        </ul>
+                <div class="text-justify">
+                    <p>Welcome to the exciting journey of mastering Data Structures and Algorithms using Python. In this
+                        introductory video, we delve into the fundamentals of Python programming, laying the groundwork for
+                        your exploration into the world of DSA.</p>
+                    <p>In this first installment, we cover:</p>
+                    <ul>
+                        <li><b>Understanding Python</b>: We explore the origins of Python, its developers, and why it's essential
+                            to learn.</li>
+                        <li><b>Advantages and Disadvantages</b>: Learn about the strengths and weaknesses of Python compared to
+                            other programming languages.</li>
+                        <li><b>Python 2 vs. Python 3</b>: Understand the key differences between these two versions and their
+                            implications.</li>
+                        <li><b>Programming vs. Scripting</b>: Using Java and Python as examples, we distinguish between programming
+                            and scripting languages.</li>
+                        <li><b>Compiler vs. Interpreter</b>: Gain insights into how Python's interpreter differs from traditional
+                            compilers.</li>
+                        <li><b>Installation Guide</b>: Step-by-step instructions on installing Python from the official website and
+                            setting up VS Code IDE.</li>
+                        <li><b>Alternative for Limited Resources</b>: We also recommend <a href="https://replit.com">replit.com</a> for users with resource
+                            constraints.</li>
+                    </ul>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <!-- Embed YouTube video here -->
+                        <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/WFhTdkN7rh4?si=3Eq3ehPxgB5yTwyo""
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-6 padding">
+                        <div class="text-justify">
+                            <p style="font-size: 30px; font-weight: 700; color: blue;">Why Python for DSA?</p>
+                            <ul class="list-unstyled padding">
+                                <li><i class="bi bi-check-circle text-primary"></i> Versatility and ease of use</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Extensive library support</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Rapid development and prototyping</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Community-driven ecosystem</li>
+                            </ul>
+    
+                            <p style="font-size: 30px; font-weight: 700; color: blue;">What You'll Learn:</p>
+                            <ul class="list-unstyled padding">
+                                <li><i class="bi bi-check-circle text-primary"></i> Basics of Python syntax and structure
+                                </li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Setting up development environment</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Pythonic coding principles</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Introduction to DSA concepts</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <div class="text-justify mt-4">
+                    <p>Ready to embark on your journey into the world of mastering DSA with Python? Subscribe to our
+                        <b>Mastering DSA Using Python</b> playlist on YouTube and start your learning journey today!</p>
+                </div>
+                <!-- Buttons Start -->
+                <div class="text-center mt-4">
+                    <a href="enrollment" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                    <a href="LINK_TO_INTRODUCTION_VIDEO" class="btn btn-outline-primary btn-lg">Watch Introduction Video</a>
+                </div>
+                <!-- Buttons End -->
             </div>
-            <div class="text-justify mt-4">
-                <p>Ready to embark on your journey into the world of mastering DSA with Python? Subscribe to our
-                    <b>Mastering DSA Using Python</b> playlist on YouTube and start your learning journey today!</p>
-            </div>
-            <!-- Buttons Start -->
-            <div class="text-center mt-4">
-                <a href="enrollment" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                <a href="LINK_TO_INTRODUCTION_VIDEO" class="btn btn-outline-primary btn-lg">Watch Introduction Video</a>
-            </div>
-            <!-- Buttons End -->
         </div>
-    </section>
-    <!-- Content End -->
-
+        <div class="dropdowna">
+            <!-- Sidebar content -->
+            <ul class="dropdowna-menu">
+                <li class="heading">Python Basics</li>
+                <li><a href="/python/index.htm">Python - Home</a></li>
+                <li><a href="/python/python_overview.htm">Python - Overview</a></li>
+                <li><a href="/python/python_history.htm">Python - History</a></li>
+                <li><a href="/python/python_features.htm">Python - Features</a></li>
+                <li><a href="/python/python_vs_cpp.htm">Python vs C++</a></li>
+                <li class="heading">Python Control Statements</li>
+                <li><a href="/python/python_control_flow.htm">Python - Control Flow</a></li>
+                <li><a href="/python/python_decision_making.htm">Python - Decision Making</a></li>
+                <li><a href="/python/python_if_statement.htm">Python - If Statement</a></li>
+                <li><a href="/python/python_if_else.htm">Python - If else</a></li>
+                <li><a href="/python/nested_if_statements_in_python.htm">Python - Nested If</a></li>
+                <li class="heading">Python Functions &amp; Modules</li>
+                <li><a href="/python/python_functions.htm">Python - Functions</a></li>
+                <li><a href="/python/python_default_arguments.htm">Python - Default Arguments</a></li>
+                <li><a href="/python/python_keyword_arguments.htm">Python - Keyword Arguments</a></li>
+                <li><a href="/python/python_keywordonly_arguments.htm">Python - Keyword-Only Arguments</a></li>
+                <li><a href="/python/python_positional_arguments.htm">Python - Positional Arguments</a></li>
+                <li class="heading">Python Strings</li>
+                <li><a href="/python/python_strings.htm">Python - Strings</a></li>
+                <li><a href="/python/python_slicing_strings.htm">Python - Slicing Strings</a></li>
+                <li><a href="/python/python_modify_strings.htm">Python - Modify Strings</a></li>
+                <li><a href="/python/python_string_concatenation.htm">Python - String Concatenation</a></li>
+                <li class="heading">Python Lists</li>
+                <li><a href="/python/python_lists.htm">Python - Lists</a></li>
+                <li><a href="/python/python_access_list_items.htm">Python - Access List Items</a></li>
+                <li><a href="/python/python_change_list_items.htm">Python - Change List Items</a></li>
+                <li><a href="/python/python_add_list_items.htm">Python - Add List Items</a></li>
+                <li><a href="/python/python_remove_list_items.htm">Python - Remove List Items</a></li>
+                <li><a href="/python/python_loop_lists.htm">Python - Loop Lists</a></li>
+                <li class="heading">Python Tuples</li>
+                <li><a href="/python/python_tuples.htm">Python - Tuples</a></li>
+                <li><a href="/python/python_access_tuple_items.htm">Python - Access Tuple Items</a></li>
+                <li><a href="/python/python_update_tuples.htm">Python - Update Tuples</a></li>
+                <li><a href="/python/python_unpack_tuples.htm">Python - Unpack Tuples</a></li>
+                <li><a href="/python/python_loop_tuples.htm">Python - Loop Tuples</a></li>
+                <li><a href="/python/python_join_tuples.htm">Python - Join Tuples</a></li>
+                <li><a href="/python/python_tuple_methods.htm">Python - Tuple Methods</a></li>
+                <li><a href="/python/python_tuple_exercises.htm">Python - Tuple Exercises</a></li>
+                <li class="heading">Python Sets</li>
+                <li><a href="/python/python_sets.htm">Python - Sets</a></li>
+                <li><a href="/python/python_access_set_items.htm">Python - Access Set Items</a></li>
+                <li><a href="/python/python_add_set_items.htm">Python - Add Set Items</a></li>
+                <li><a href="/python/python_remove_set_items.htm">Python - Remove Set Items</a></li>
+                <li><a href="/python/python_loop_sets.htm">Python - Loop Sets</a></li>
+                <li class="heading">Python Dictionaries</li>
+                <li><a href="/python/python_dictionaries.htm">Python - Dictionaries</a></li>
+                <li><a href="/python/python_access_dictionary_items.htm">Python - Access Dictionary Items</a></li>
+                <li><a href="/python/python_change_dictionary_items.htm">Python - Change Dictionary Items</a></li>
+                <li><a href="/python/python_add_dictionary_items.htm">Python - Add Dictionary Items</a></li>
+                <li><a href="/python/python_remove_dictionary_items.htm">Python - Remove Dictionary Items</a></li>
+                <li><a href="/python/python_dictionary_view_objects.htm">Python - Dictionary View Objects</a></li>
+                <li class="heading">Python Arrays</li>
+                <li><a href="/python/python_arrays.htm">Python - Arrays</a></li>
+                <li><a href="/python/python_access_array_items.htm">Python - Access Array Items</a></li>
+                <li><a href="/python/python_add_array_items.htm">Python - Add Array Items</a></li>
+                <li><a href="/python/python_remove_array_items.htm">Python - Remove Array Items</a></li>
+                <li><a href="/python/python_loop_arrays.htm">Python - Loop Arrays</a></li>
+                <li class="heading">Python File Handling</li>
+                <li><a href="/python/python_file_handling.htm">Python - File Handling</a></li>
+                <li><a href="/python/python_write_to_file.htm">Python - Write to File</a></li>
+                <li><a href="/python/python_read_files.htm">Python - Read Files</a></li>
+                <li><a href="/python/python_renaming_and_delete_files.htm">Python - Renaming and Deleting Files</a></li>
+                <li class="heading">Object Oriented Programming</li>
+                <li><a href="/python/python_oops_concepts.htm">Python - OOPs Concepts</a></li>
+                <li><a href="/python/python_object_classes.htm">Python - Object & Classes</a></li>
+                <li><a href="/python/python_class_attributes.htm">Python - Class Attributes</a></li>
+                <li><a href="/python/python_class_methods.htm">Python - Class Methods</a></li>
+                <li><a href="/python/python_static_methods.htm">Python - Static Methods</a></li>
+                <li><a href="/python/python_constructors.htm">Python - Constructors</a></li>
+                <li class="heading">Python Errors &amp; Exceptions</li>
+                <li><a href="/python/python_syntax_errors.htm">Python - Syntax Errors</a></li>
+                <li><a href="/python/python_exceptions.htm">Python - Exceptions</a></li>
+                <li><a href="/python/python_tryexcept_block.htm">Python - try-except Block</a></li>
+                <li><a href="/python/python_tryfinally_block.htm">Python - try-finally Block</a></li>
+                <li><a href="/python/python_raising_exceptions.htm">Python - Raising Exceptions</a></li>
+                <li class="heading">Python Multithreading</li>
+                <li><a href="/python/python_multithreading.htm">Python - Multithreading</a></li>
+                <li><a href="/python/python_thread_life_cycle.htm">Python - Thread Life Cycle</a></li>
+                <li><a href="/python/python_creating_thread.htm">Python - Creating a Thread</a></li>
+                <li><a href="/python/python_starting_thread.htm">Python - Starting a Thread</a></li>
+                <li><a href="/python/python_joining_threads.htm">Python - Joining Threads</a></li>
+                <li class="heading">Python Synchronization</li>
+                <li><a href="/python/python_interthread_communication.htm">Python - Inter-thread Communication</a></li>
+                <li><a href="/python/python_thread_deadlock.htm">Python - Thread Deadlock</a></li>
+                <li><a href="/python/python_interrupting_thread.htm">Python - Interrupting a Thread</a></li>
+                <li class="heading">Python Networking</li>
+                <li><a href="/python/python_networking.htm">Python - Networking</a></li>
+                <li><a href="/python/python_socket_programming.htm">Python - Socket Programming</a></li>
+                <li><a href="/python/python_url_processing.htm">Python - URL Processing</a></li>
+                <li><a href="/python/python_generics.htm">Python - Generics</a></li>
+                <li class="heading">Python Libraries</li>
+                <li><a href="/numpy/index.htm">NumPy Tutorial</a></li>
+                <li><a href="/python_pandas/index.htm">Pandas Tutorial</a></li>
+                <li><a href="/scipy/index.htm">SciPy Tutorial</a></li>
+                <li><a href="/matplotlib/index.htm">Matplotlib Tutorial</a></li>
+                <li><a href="/django/index.htm">Django Tutorial</a></li>
+                <li><a href="/opencv_python/index.htm">OpenCV Tutorial</a></li>
+                <li class="heading">Python Miscellenous</li>
+                <li><a href="/python/python_date_time.htm">Python - Date &amp; Time</a></li>
+                <li><a href="/python/python_maths.htm">Python - Maths</a></li>
+                <li><a href="/python/python_iterators.htm">Python - Iterators</a></li>
+                <li><a href="/python/python_generators.htm">Python - Generators</a></li>
+                <li><a href="/python/python_closures.htm">Python - Closures</a></li>
+                <li><a href="/python/python_decorators.htm">Python - Decorators</a></li>
+                <li><a href="/python/python_recursion.htm">Python - Recursion</a></li>
+                <li><a href="/python/python_reg_expressions.htm">Python - Reg Expressions</a></li>
+                <li><a href="/python/python_pip.htm">Python - PIP</a></li>
+                <li><a href="/python/python_guis.htm">Python - GUIs</a></li>
+                <!--<li class="heading">Python Questions and Answers</li>-->
+                <li class="heading">Python Useful Resources</li>
+                <li><a href="/online_python_compiler.php">Python Compiler</a></li>
+                <li><a href="/execute_numpy_online.php">NumPy Compiler</a></li>
+                <li><a href="/execute_matplotlib_online.php">Matplotlib Compiler</a></li>
+                <li><a href="/execute_scipy_online.php">SciPy Compiler</a></li>
+                <li><a href="/python/python_programming_examples.htm">Python - Programming Examples</a></li>
+                <li><a href="/python/python_quick_guide.htm">Python - Quick Guide</a></li>
+                <li><a href="/python/python_useful_resources.htm">Python - Useful Resources</a></li>
+                <li><a href="/python/python_discussion.htm">Python - Discussion</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Main Content End -->
 
 
     <!-- Footer Start -->
@@ -371,10 +604,11 @@
     <script src="../lib/easing/easing.min.js"></script>
     <script src="../lib/waypoints/waypoints.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="course-script.js"></script>
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <script src="../js/security.js"></script>
+    <!-- <script src="../js/security.js"></script> -->
     <script src="../js/newsletter.js" type="module"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
