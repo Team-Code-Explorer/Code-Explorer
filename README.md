@@ -1,3 +1,5 @@
+# Code Explorer
+
 Welcome to Code Explorer, a premier programming coaching center that helps individuals unlock the full potential of their programming skills. We are dedicated to providing high-quality instruction and resources to individuals of all levels, from complete beginners to experienced developers.
 
 At Code Explorer, we believe that programming is a powerful tool that can change lives and open doors to new opportunities. Our team of experienced coaches are passionate about teaching and are dedicated to helping our students succeed. We understand that everyone learns differently and we tailor our instruction to meet the unique needs of each individual.
